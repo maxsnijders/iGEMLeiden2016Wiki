@@ -2,5 +2,5 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: local('Montserrat-Regular'), url('Montserrat.woff') format('woff');
+  src: local('Montserrat-Regular'), url('http://2016.igem.org/File:Team-leiden-style-fonts-montserrat.woff') format('woff');
 }
