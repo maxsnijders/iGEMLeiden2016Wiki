@@ -16,7 +16,7 @@ html, body {
 }
 
 .container-fluid {
-  padding: 60px 100px;
+  padding: 60px 50px;
 }
 
 .bg-grey {
@@ -102,7 +102,8 @@ footer .glyphicon {
 }
 
 #bodyContent {
-  margin-top: -10px;
+  margin-top: -15px;
+  margin-bottom: -20px;
 }
 
 h2 {
