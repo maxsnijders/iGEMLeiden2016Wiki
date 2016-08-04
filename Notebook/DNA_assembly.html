@@ -1,0 +1,663 @@
+<html>
+	<head>
+	<title> iGEM Leiden Wiki / DNA_assembly</title>
+	<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+	<h1> DNA assembly Labjournal </h1>
+		<h2>Experimental setup </h2>
+			<p> In this track, the DNA received from IDT was assembled in pBluescript plasmids using Gibson Assemblies. Inserts were checked using colony-PCR on white colonies, after which frozen plasmid stocks were made and the constructs were checked in detail using sequencing.
+				After this, the four BioBricks were placed in the right order using two subsequent rounds of 3A Assembly. </p>
+
+		<h2>IDTDNA solution, grow pBluescript E. coli</h2> 
+			<p><i>Day1: 2016/07/04 </i> <br>
+				<b> Investigator(s): Sjoerd Seekles, Lisanne van Oosterhoud, Charlotte van de Velde </b> <br>
+				<b>Procedure</b>:<br>
+				First labwork started. IDTDNA was delivered as powder. On the information sheet they recommend to disolve their DNA in 100ul water. Which will result in a concentration of 10 ng/&micro;l (1000ng total in the tube).
+				<br>
+				For this we spin down the tubes. Add (warmed up 60&degC) MQ water (fresh water, fresh pipet tips). Short vortexing (set the vortex at 1 pm). The DNA was put in 60&degC stove for 30 minutes. Then again spin down plus vortex. Put in the -20&degC.
+				<br>
+				Took from -80&degC stock of Dennis some pBluescript to grow on LB+Xgal+IPTG+AMP. (20&micro;l per plate, stock 0.1M IPTG, 40 mg/ml Xgal and 100 mg/ml Amp). Also grow pBluescript in liquid (add Amp 1:1000).
+			</p>
+		
+		<h2>Gibson pcrABCD, restriction, ligation, transformation QDH+DHC, cld, moaA</h2>
+			<p><i>Day2: 2016/07/06 </i> <br>
+				<b>Investigator(s): Sjoerd Seekles, Lisanne van Oosterhoud </b> <br>
+				<b>Procedure </b>: <br>
+				Gibson assembly. Used pBlue 13.5 ng/&micro;l linearized with EcoRV <b> pcrABCD </b>:
+				
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Volume </b> </th>
+			<th><b> Amount (ng)</th>
+		</tr>
+		 <tr>
+			<td>Vector</td>
+			<td>1 &micro;l </td>
+			<td> 13.5 </td>
+		</tr>
+		<tr>
+			<td>Insert </td>
+			<td>2-2-2-2 &micro;l </td>
+			<td> 10-10-10-10 </td>
+		</tr>
+		<tr>
+			<td>Gibsonmix</td>
+			<td>10 &micro;l </td>
+			<td> - </td>
+		</tr>
+		<tr>
+			<td> <b>Total</b> </td>
+			<td> 20 &micro;l </td>
+			<td> - </td>
+		</tr>
+		</table>
+		
+	<p>
+	Gibson reaction at 50&degC in heat block. 1 hour. Transform with super competent cells of kit. Followed transformation protocol of kit, but used everything of the gibson reaction to add to cells. And plate 50 &micro;l, 250 &micro;l and rest (~700&micro;l). 
+	</p>
+	<p>
+	Restriction was done on cld, QDH+DHC, MoaA and pBluescript(Wouter) with EcoRI and PstI. 1 hour, 37&degC. 
+	The digestion was performed in a volume of 20 &micro;l:
+	</p>
+	
+	<ul>
+		<li> 11 &micro;l MilliQ </li>
+		<li> 2 &micro;l Orange buffer</li>
+		<li> 5 &micro;l IDTDNA</li>
+		<li> 1 &micro;l PstI</li>
+		<li> 1 &micro;l EcoRI</li>
+	</ul>
+	
+	<p>
+	Ligation was done on the digestion. Ligation at room temperature for 10 minutes.
+	The ligation was performed in 20 &micro;l:
+	</p>
+		
+	<ul>
+		<li> 6 ul insert</li>
+		<li > 3 ul 10x diluted vector (vector is 120 ng/&micro;l pBlue Wouter)</li>
+		<li > 4 ul Rapid ligation buffer (5x)</li>
+		<li > 6 ul MQ</li>
+	</ul>
+	
+	<p>
+	Transformation was done with Gibson protocol.
+	</p>
+	
+	<h2>Check IDTDNA </h2>
+		<p><i>Day2: 2016/07/06 </i> <br>
+				<b>Investigator(s): Sjoerd Seekles, Lisanne van Oosterhoud, Charlotte van de Velde </b> <br>
+				<b>Procedure </b>: 
+				The DNA was Nanodropped and checked on the gel. 
+		</p>
+		<p> Nanodrop results:</p>
+				
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Nanodrop (ng/&micro;l) </b> </th>
+			<th><b> 280/260 </b></th>
+			<th><b> 280/230 </b></th>
+		</tr>
+		 <tr>
+			<td>pcr1</td>
+			<td>8.6 </td>
+			<td> 2.09 </td>
+			<td> 2.28 </td>
+		</tr>
+		<tr>
+			<td>pcr2 </td>
+			<td> 8.1 </td>
+			<td> 1.93 </td>
+			<td> 2.72 </td>
+		</tr>
+		<tr>
+			<td>pcr3</td>
+			<td> 3.9 </td>
+			<td> 1.48 </td>
+			<td> 2.28 </td>
+		</tr>
+		<tr>
+			<td> pcr4 </td>
+			<td> 4.7</td>
+			<td> 1.69 </td>
+			<td> 2.19 </td>
+		</tr>
+		<tr>
+			<td> cld </td>
+			<td> 6.4 </td>
+			<td> 1.66 </td>
+			<td> 1.58 </td>
+		</tr>
+		<tr>
+			<td> QDH + DHC </td>
+			<td> 7.5 </td>
+			<td> 1.97 </td>
+			<td> 2.17 </td>
+		</tr>
+		<tr>
+			<td> MoaA </td>
+			<td> 5.6 </td>
+			<td> 1.87 </td>
+			<td> 2.43 </td>
+		</tr>
+		</table>
+	
+	<p>Gel was run with 5 ul IDTDNA and 5 ul pBluescript (linearized 13.5 and Wouter 120 variant, linearized) </p>
+	
+	<h2>Gibson moaA </h2>
+		<p><i>Day3: 2016/07/08 </i> <br>
+				<b>Investigator(s): Sjoerd Seekles, </b> <br>
+				<b>Procedure </b>: Repeat Gibson. This time with proper control. We saw on the gel that moaA had proper 1200 bps band.
+				<b> moaA </b>
+		</p>
+	
+	<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Volume </b> </th>
+			<th><b> Amount (ng)</th>
+		</tr>
+		 <tr>
+			<td>Vector</td>
+			<td>2 &micro;l </td>
+			<td> 27 </td>
+		</tr>
+		<tr>
+			<td>Insert </td>
+			<td>8 &micro;l </td>
+			<td> 40</td>
+		</tr>
+		<tr>
+			<td>Gibsonmix</td>
+			<td>10 &micro;l </td>
+			<td> - </td>
+		</tr>
+		<tr>
+			<td> <b>Total</b> </td>
+			<td> 20 &micro;l </td>
+			<td> - </td>
+		</tr>
+		</table>
+		
+	<h2> Plasmid isolation from strains with moaA or cld</h2>
+		<p><i>Day4: 2016/07/13 </i> <br>
+				<b>Investigator(s): Valentijn Broeken, Wouter Liefting, Lisanne Oosterhoud, Lizah van der Aart  </b> <br>
+				<b>Procedure </b>: 
+				The Plasmid isolation by Alkaline lysis protocol was used to isolate the plasmids from the white colonies grown in liquid LB medium. For 14 cultures, the anticipated insert was cld, and for 14 other cultures this was moaA. No chloroform/phenol extraction was performed.
+				<br>
+				The isolated plasmids were then dissolved in 50 &micro;l of demi water and the nucleic acid concentration was measured using a Nanodrop, together with the 260/280 ratio (protein contamination) and 260/230 ratio (contamination by salts and solvents).
+				<br>
+				<b> Results:</b> The Nanodrop values were extremely high. In the follow-up experiment (putting the samples on gel), it turned out that most of it was RNA.
+		</p>
+	
+	<h2> Gel electrophoresis of the isolated moaA or cld plasmids</h2>
+		<p><i>Day5: 2016/07/14 </i> <br>
+				<b>Investigator(s): Valentijn Broeken  </b> <br>
+				<b>Procedure </b>: 
+				To roughly check whether the anticipated inserts were present in the isolated plasmids, samples were digested with two restriction enzymes flanking the inserts (PstI and EcoRI) and subsequently put on a gel.
+				<br>
+				For each insert, five samples with high 260/280 and 260/230 ratios (both >1.9) and high nucleic acid concentrations (>2500 ng/&micro;l) were selected.
+				<br>
+				The digestion was performed in a volume of 20 &micro;l:
+	<ul>
+		<li> 11 &micro;l MilliQ</li>
+		<li > 2 &micro;l Restriction buffer 2.1 (NEB)</li>
+		<li > 5 &micro;l Isolated plasmid solution</li>
+		<li > 1 &micro;l PstI</li>
+		<li > 1 &micro;l EcoRI</li>
+	</ul>	
+		The mixture was put at 37°C for 1 hour.
+		</p>
+		<p>
+				<br>
+				A gel containing 1% agarose was made by Lisanne the day before. Of each digestion mixture, 5 &micro;l supplemented with 1 &micro;l purple loading dye (NEB) was put on the gel. The gel run for 55 minutes at 100V. As a ladder, 5 &micro;l of the Quick Load 2-log DNA ladder (NEB) was used.
+				<br>	
+				After running, the gel was stained 30 minutes in a 0.5 &micro;g/ml ethidiumbromide in 1x TAE solution, after which it was washed during 30 minutes in 1x TAE (not necessary).
+				<br>
+				Expectations After digestion with EcoRI and PstI, the following fragments are expected:
+		</p>
+	<ul>
+		<li>cld-BioBrick: 888 basepairs </li>
+		<li>moaA-BioBrick: 1011 basepairs </li>
+		<li>pBluescript plasmid: 2963 basepairs </li>
+		
+	</ul>
+	<p>
+	Results The samples were loaded in the following order:
+	
+	<table id="t01">
+		<tr>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+			
+		</tr>
+		 <tr>
+			<td> 7 </td>
+			<td> Ladder </td>
+			<td> 13 </td>
+			<td> cld 1 </td>
+		</tr>
+		<tr>
+			<td>8 </td>
+			<td> moaA </td>
+			<td> 14</td>
+			<td> cld 4</td>
+		</tr>
+		<tr>
+			<td> 9 </td>
+			<td>moaA 6 </td>
+			<td> 15 </td>
+			<td> cld 6 </td>
+		</tr>
+		<tr>
+			<td> 10 </td>
+			<td> moaA 7 </td>
+			<td> 16 </td>
+			<td> cld 9 </td>
+		</tr>
+		<tr>
+			<td> 11 </td>
+			<td> moaA 9</td>
+			<td> 17 </td>
+			<td> cld 12 </td>
+		</tr>
+		<tr>
+			<td> 12 </td>
+			<td> moaA 13 </td>
+			<td> 18 </td>
+			<td> Ladder </td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-14_14hr_43min7ladder8-12moaa4_6_7_9_13--13-17cld1_4_6_9_12_ladder18.jpg'class="media" alt="" width="300" /></a>
+	
+	<p>
+	<b>Conclusion </b>
+	It is hard to draw conclusions from this gel, since RNA makes up most of the nucleic acid in the samples and no control pBluescript plasmid was added. The bands around 2-3kb could be pBluescript, but it is under debate why it would appear at two different heights then. There are really weak bands visible around 4kb, which could be the uncut plasmid containing the insert, but no fragments around 1 kb could be discovered - being the expected height for the digested inserts of moaA or cld.
+	<br>
+	To be able to draw firmer conclusions, a colony PCR was performed.
+	</p>
+	
+	<h2> Gel electrophoresis of the isolated moaA or cld plasmids</h2>
+		<p><i>Day5: 2016/07/14 </i> <br>
+				<b>Investigator(s): Valentijn Broeken, Lizah van der Aart  </b> <br>
+				<b>Procedure </b>: 
+				Since the digestion check wasn't successful in verifying whether inserts of the correct length were present in the pBluescript plasmids, a colony PCR was performed (see Q5 Colony PCR protocol with a 72&degC step of 45 sec). For each fragment, 1 blue and 7 white colonies were selected from the X-gal plates of the Gibson Assembly. Besides, an intact pBluescript was used as a control. 13M forward and reverse primers were used to amplify the insert in pBluescript. The PCR products were put on a gel to determine their length.
+				<br>
+				<b>Expectations:</b>
+					<ul>
+						<li>No insert: 231 bp</li>
+						<li>cld-insert: 1119 bp</li>
+						<li>moaA-insert: 1242 bp</li>
+					</ul>
+				<b>Results</b>
+				
+		<table id="t01">
+		<tr>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+			
+		</tr>
+		 <tr>
+			<td> 7 </td>
+			<td> Ladder </td>
+			<td> 13 </td>
+			<td> cld 1 </td>
+		</tr>
+		<tr>
+			<td>8 </td>
+			<td> moaA </td>
+			<td> 14</td>
+			<td> cld 4</td>
+		</tr>
+		<tr>
+			<td> 9 </td>
+			<td>moaA 6 </td>
+			<td> 15 </td>
+			<td> cld 6 </td>
+		</tr>
+		<tr>
+			<td> 10 </td>
+			<td> moaA 7 </td>
+			<td> 16 </td>
+			<td> cld 9 </td>
+		</tr>
+		<tr>
+			<td> 11 </td>
+			<td> moaA 9</td>
+			<td> 17 </td>
+			<td> cld 12 </td>
+		</tr>
+		<tr>
+			<td> 12 </td>
+			<td> moaA 13 </td>
+			<td> 18 </td>
+			<td> Ladder </td>
+		</tr>
+		</table>
+		<br>
+		<br>
+		<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-14_19h_57min1-8cld-9control_10-17_moaa.jpg'class="media" alt="" width="300" /></a>
+	
+		<p>
+		Colonies moaA #5, moaA #7, cld #6, cld #7 showed proper band sizes on the gel and were therefore used in the follow-up experiments.
+		</p>
+		
+		<h2> Gibson pcrABCD, QDH-DHC. Transformatie Backbones, Gibson en primers van kit, miniprep cld, moaA</h2>
+		<p><i>Day6: 2016/07/15 </i> <br>
+				<b>Investigator(s): Sjoerd Seekles, Wouter Liefting  </b> <br>
+				<b>Procedure </b>: 
+				Cld and moaA colonies (moaA #5, moaA #7, cld #6, cld #7) were grown in liquid medium (13ml tubes) in LB+2xAMP at 37&degC 150rpm.
+                <br>
+				Gibson assembly of pcrABCD in pBluescript and QDH+DHC in pBluescript was performed.
+				<br>
+			<b>QDH</b>
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Volume </b> </th>
+			<th><b> Amount (ng)</th>
+		</tr>
+		 <tr>
+			<td>Vector</td>
+			<td>2 &micro;l </td>
+			<td> 27 </td>
+		</tr>
+		<tr>
+			<td>Insert </td>
+			<td>8 &micro;l </td>
+			<td> 40 </td>
+		</tr>
+		<tr>
+			<td>Gibsonmix</td>
+			<td>10 &micro;l </td>
+			<td> - </td>
+		</tr>
+		<tr>
+			<td> <b>Total</b> </td>
+			<td> 20 &micro;l </td>
+			<td> - </td>
+		</tr>
+		</table>
+		<br>
+			
+			<b>pcrABCD:</b>
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Volume </b> </th>
+			<th><b> Amount (ng)</th>
+		</tr>
+		 <tr>
+			<td>Vector</td>
+			<td>2 &micro;l </td>
+			<td> 27 </td>
+		</tr>
+		<tr>
+			<td>Insert </td>
+			<td> 2-2-2-2 &micro;l </td>
+			<td> 40 </td>
+		</tr>
+		<tr>
+			<td>Gibsonmix</td>
+			<td>10 &micro;l </td>
+			<td> 10-10-10-10 </td>
+		</tr>
+		<tr>
+			<td> <b>Total</b> </td>
+			<td> 20 &micro;l </td>
+			<td> - </td>
+		</tr>
+		</table>
+		<br>
+	<b> BioBricks ligation </b>
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Volume </b> </th>
+		</tr>
+		 <tr>
+			<td>Ligase</td>
+			<td>1 &micro;l </td>
+		</tr>
+		<tr>
+			<td>Buffer 10x </td>
+			<td> 2&micro;l </td>
+		</tr>
+		<tr>
+			<td>Plasmid</td>
+			<td>5 &micro;l </td>
+		</tr>
+		<tr>
+			<td>Water</td>
+			<td>12 &micro;l </td>
+		</tr>
+		<tr>
+			<td> <b>Total</b> </td>
+			<td> 20 &micro;l </td>
+		</tr>
+		</table>	
+		<br>
+		
+		<h2> Colony PCR for pcrABCD and QDH+DHC transformants</h2>
+		<p><i>Day7: 2016/07/18 </i> <br>
+				<b>Investigator(s): Valentijn Broeken  </b> <br>
+				<b>Procedure </b>: 
+				White colonies resulting from the Gibson assembly of pcrABCD in pBluescript (10 colonies) and QDH + DHC in pBluescript (8 colonies) were taken and the plasmids were amplified using M13 primers. The method used is the Q5 Colony PCR protocol.
+				<b>Expectations:</b>
+					<ul>
+						<li>No insert: 231 bp</li>
+						<li>QDH+DHC insert: 1757 bp</li>
+						<li>pcrABCD insert: 5572 bp</li>
+					</ul>
+				
+		<b>Results</b>
+	<table id="t01">
+		<tr>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+		</tr>
+		 <tr>
+			<td>3</td>
+			<td>ladder </td>
+		</tr>
+		<tr>
+			<td>4-13 </td>
+			<td>pcrABCD 1 - 10 </td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>pBluescript control </td>
+		</tr>
+		<tr>
+			<td> 15-22 </td>
+			<td> QDH+DHC 1 - 8</td>
+		</tr>
+	</table>
+		
+	<br>
+	<br>
+		<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-18_13hr_35min_3ladder4-13pcrabcd1-10--14controle--15-22qdhdhc_high.jpg'class="media" alt="" width="300" /></a>
+	
+		<p>
+		The same PCR programme as at 2016/07/14 was used. This meant that the 72&degC step turned out to be too short (only 45 sec) for the 5.6kb fragment to be amplified (which would require 168 sec), resulting in incomplete bands on the gel. Therefore, the strains showing bands were once again used for a colony PCR with these longer 72&degC steps of 2min48. The bacteria used for the second PCR were transferred from the streaks made this morning during the first colony PCR.
+		<br>
+		These amplified samples were stored at 4&degC to put on a gel later.
+		</p>
+		
+	<p><i>Day8: 2016/07/20 </i> <br>
+				<b>Investigator(s): Lisanne Oosterhoud  </b> <br>
+				<b>Procedure </b>: 
+		<table id="t01">
+		<tr>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+			<th> <b> Lane </b> </th>
+			<th><b> Content </b> </th>
+		</tr>
+		 <tr>
+			<td>1</td>
+			<td>ladder </td>
+			<td>15</td>
+			<td>ladder </td>
+		</tr>
+		<tr>
+			<td>12 </td>
+			<td>pcrABCD culture 3</td>
+			<td>16</td>
+			<td>pcrABCD culture 9 </td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>pcrABCD culture 4 </td>
+			<td>3=17</td>
+			<td>pcrABCD culture 10 </td>
+		</tr>
+		<tr>
+			<td>14 </td>
+			<td> pcrABCD culture 8</td>
+			<td>18</td>
+			<td>Empty pBluescript</td>
+		</tr>
+	</table>
+	
+	<br>
+	<br>
+		<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-20_10hr_55minpcrabcd6-7-11-ladder-12-13-controle.1sc.jpg'class="media" alt="" width="300" /></a>
+	
+		<p>
+		The total fragment of pcrABCD amplified with M13 primers is 5,572 bp. There is however another binding site for the M13fw primer, at the bottom strand in pcrA (base 2277-2286), which can create a fragment of 2,401 bp. An empty pBluescript plasmid has a 231 bp fragment between the M13 primers.
+		</p>
+	
+		<h2> Massive DNA plasmid isolation from transformants with Biobricks, Backbones, Promotors and our own Gibsons, followed by restriction</h2>
+		<p><i>Day7: 2016/07/19 </i> <br>
+				<b>Investigator(s): Sjoerd Seekles, Charlotte van de Velde, Lisanne Oosterhoud </b> <br>
+				<b>Procedure </b>: 
+		<!--- Hier moet nog tekst bij worden gezet -->
+				
+		<h2> Isolate DNA from initially ungrown transformants, putting the digested samples on gel</h2>
+		<p><i>Day8: 2016/07/20 </i> <br>
+				<b>Investigator(s): Lisanne Oosterhoud, Lucie Delfos </b> <br>
+				<b>Procedure </b>: <br>
+				The transformants that didn't grown in the liquid medium were miniprepped again. At 19/7 these strains were inoculated again from the plates.
+				<br>
+			<b>Gel 1 Samples DNA plasmid isolation 19/7: </b>
+				<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-20_11hr_05min1_13_26ladder_rest_digestionsecoripsti_biobricks_registry.1sc.jpg'class="media" alt="" width="300" /></a>
+			<b>Gel 2 Samples DNA plasmid isolation 20/7: </b>
+				<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-20_17hr_46minrestrictieecoripsti_miniprep_19juli2.1sc.jpg'class="media" alt="" width="300" /></a>
+				<br>
+			Besides the ladders, no bands can be distinguished. For the samples on the first gel, a second Alkaline lysis buffer was used in which the SDS was precipitated, being a probable reason for its failure. For the second plasmid isolation + restriction, it is still unclear why no bands are visible.
+				
+		<p><i>Day8: 2016/07/21 </i> <br>
+				<b>Investigator(s): Valentijn Broeken </b> <br>
+				<b>Procedure </b>: <br>
+				Since the staining for the former gels containing our digestion fragments wasn't optimal, all samples were loaded again and run in a gel that contained EtBr, so that staining afterwards wasn't necessary. Although the bands are more clear, besides the ladder and pBluescript (2,963 bp when digested with EcoRI and PstI) no isolated plasmids could be detected.
+				<br>
+			<b>Gel 1 Samples DNA plasmid isolation 19/7: </b>
+				<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-21_11hr_05min1_13_26ladder_rest_digestionsecoripsti_biobricks_registry2nd_try_in_gel.1sc.jpg'class="media" alt="" width="300" /></a>
+			<b> Gel 2 Samples DNA plasmid isolation 20/7: </b>	
+				<img src='http://igem.msnijders.com/wiki/lib/exe/fetch.php?cache=&media=labjournals:2016-07-21_17hr_46minrestrictieecoripsti_miniprep_19juli_2nd_try_ethbr_in_gel.1sc.jpg'class="media" alt="" width="300" /></a>
+				<br>
+			The first eight lanes of the second gel contain moaA and cld samples, but only RNA-bands are visible around 100bp.
+			
+		<p><i>Day9: 2016/07/22 </i> <br>
+				<b>Investigator(s): Charlotte Oosterhoud, Sjoerd Seekles </b> <br>
+				<b>Procedure </b>: <br>
+				This day, miniprep was done in 2 different ways. The Quagen kit was used by Sjoerd, alkaline miniprep with chloroform-phenol steps by Charlotte. Miniprepping according to kit was done following their manual.
+			<br>
+			<br>
+			Nanodrop results:
+		<table id="t01">
+		<tr>
+			<th> <b> Content </b> </th>
+			<th><b> Nanodrop (ng/&micro;l) </b> </th>
+			<th><b> 280/260 </b></th>
+			<th><b> 280/230 </b></th>
+		</tr>
+		 <tr>
+			<td>MoaA#5</td>
+			<td>128.8 </td>
+			<td> 1.92 </td>
+			<td> 1.88 </td>
+		</tr>
+		<tr>
+			<td>MoaA#7</td>
+			<td> 166.3 </td>
+			<td> 1.92 </td>
+			<td> 2.09 </td>
+		</tr>
+		<tr>
+			<td>cld#6</td>
+			<td> 112.8 </td>
+			<td> 1.92 </td>
+			<td> 2.06 </td>
+		</tr>
+		<tr>
+			<td> cld#7 </td>
+			<td> 196.9</td>
+			<td> 1.91 </td>
+			<td> 2.11 </td>
+		</tr>
+		<tr>
+			<td> pcrABCD8/11 </td>
+			<td> 69.1 </td>
+			<td> 1.96 </td>
+			<td> 1.93 </td>
+		</tr>
+		<tr>
+			<td> pcrABCD10/13 </td>
+			<td> 118.3 </td>
+			<td> 1.92 </td>
+			<td> 2.01 </td>
+		</tr>
+		<tr>
+			<td> QDH-DHC </td>
+			<td> 213.4 </td>
+			<td> 1.89 </td>
+			<td> 2.19 </td>
+		</tr>
+		<tr>
+			<td>  pSB1C3 </td>
+			<td> 82.7 </td>
+			<td> 1.98 </td>
+			<td> 1.95 </td>
+		</tr>
+		<tr>
+			<td>  pSB1A3 </td>
+			<td> 74.9 </td>
+			<td> 1.97 </td>
+			<td> 1.82 </td>
+		</tr>
+		</table>
+	</body>
+</html>

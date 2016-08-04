@@ -1,0 +1,204 @@
+<html>
+	<head>
+	<title> iGEM Leiden Wiki / RPM </title>
+	<style>
+table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t01 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+	<h1> RPM Labjournal </h1>
+		<h2>Experimental setup </h2>
+			<p> The Random Positioning Machine is a device that can simulate microgravity and partial gravity, designed by Airbus Defence and Space. By constantly rotating, it averages out effective gravity on longer time scales, as for bacterial growth are involved. In this way, we can study the effects of lower gravitational levels on bacteria in our labs on earth. <br>
+Four strains were studied this experiment: <br>
+<ul>
+  <li> <i>E. coli </i>DH5&alpha;</li>
+  <li> <i> E. coli </i> TOP10</li>
+  <li> <i> E. coli </i> BW25113</li>
+  <li> <i> Pseudomonas putida </i> S12
+</ul>
+First the time needed to get OD of around 0.4 is determined for each strain. Next different dilution are tested to obtain the desired number of colonies on each plate. Finally this knowledge is used to grow around 50 colonies on a plate both in and next to the RPM to monitor differences in morphology.
+
+		<h2>Inoculating strains from plates</h2> 
+		<p><i>Day1: 2016/07/11</i> <br>
+			<b> Investigator(s): Valentijn Broeken </b> <br>
+			<b>Procedure</b>:
+			After the strains were taken from the freezer and grown on solid LB medium, colonies were transferred to liquid LB medium. By making a dilution series of this culture, the optimal bacterial density (i.e. preferred dilution series) to be used on the plates in the RPM will be determined.
+		
+			<ul>
+				<li> For each strain, a 100 mL erlenmeyer was filled with 20 mL LB medium.</li>
+				<li> Seven colonies per strain were transferred from the plates to the flask using an &ouml;se.</li>
+				<li> These were grown overnight at 30 &deg;C and 200 rpm, starting at 17:00.</li>
+			</ul>
+		</p>
+		
+		<h2>Colonies on plate</h2> 
+		<p><i>Day2: 2016/07/12</i> <br>
+			<b> Investigator(s): Wouter Liefting </b> <br>
+			<b>Procedure</b>:
+			In the mean time some experiments have been done and from these experiments the following results follow:
+			<br>
+			<br>
+			<b>Getting the right OD</b>
+			<br>
+			<br>
+			Grown in 20 mL LB in 100 mL erlenmeyer in shaker at 30 &degC. 
+			</p>
+		
+	
+	<table id="t01">
+	<tr>
+	 <th></th>
+	 <th> <i>E. coli </i>DH5&alpha; </th>
+	 <th><i> E. coli </i> TOP10</th>
+	 <th><i> E. coli </i> BW25113</th>
+	 <th><i> Pseudomonas putida </i> S12</th>
+	</tr>
+		  <tr>
+			<td>Growth time</td>
+			<td>4.5h</td>
+			<td>4h</td>
+			<td>3h</td>
+			<td>3h</td>
+		  </tr>
+		  <tr>
+			<td>OD</td>
+			<td>0.26</td>
+			<td>0.42</td>
+			<td>0.45</td>
+			<td>0.43</td>
+		  </tr>
+	</table>
+	<br>
+	
+	<p>
+		<b>Getting the right number of colonies</b>
+		<br>
+		<br>
+		Number of colonies from the OD given above (average of two plates):
+	</p>
+	
+	<table id="t01">
+	<tr>
+	 <th></th>
+	 <th> <i>E. coli </i>DH5&alpha; </th>
+     <th><i> E. coli </i> TOP10</th>
+     <th><i> E. coli </i> BW25113</th>
+	 <th><i> Pseudomonas putida </i> S12</th>
+	</tr>
+		  <tr>
+			<td>10<sup>-6</sup></td>
+			<td>1</td>
+			<td>45</td>
+			<td>144</td>
+			<td>170</td>
+		  </tr>
+		  <tr>
+			<td>10<sup>-6.5</sup></td>
+			<td>0</td>
+			<td>10</td>
+			<td>45</td>
+			<td>5</td>
+		  </tr>
+		  <tr>
+			<td>10<sup>-7</sup></td>
+			<td>10</td>
+			<td>87</td>
+			<td>25</td>
+			<td>3</td>
+		  </tr>
+	</table>
+	<br>
+	<p>From this we can conclude that we need to grow both <i>Pseudomonas putida</i> S12 and <i> E. coli </i>BW25113 3 hours, <i>E. coli </i> TOP10 4 hours and <i> E. coli </i> DH5&alpha; 5 hours. Then we need to dilute them 10 <sup>-6.5 </sup>to get the desired number of colonies on each plate.</p>
+	
+	<h2>Inoculating strains for phenotype study in simulated microgravity</h2>
+		<p><i>Day3: 2016/07/19</i> <br>
+			<b>Investigator(s): Wouter Liefting </b> <br>
+			<b>Procedure</b>:
+			Strains were inoculated from the plates in the refrigerator (grown up from the -80 &degC stock made at the beginning of these experiments &rarr; this has to be repeated when the experiment is started for the RNA-seq data!). One colony of each plate is put in 2.5 mL liquid LB in 10 mL tube. Overnight in the shaker at 30 &degC. </p>
+		
+		<p><i>Day4: 2016/07/20</i> <br>
+			<b>Investigator(s): Wouter Liefting, Valentijn Broeken </b> <br>
+			<b>Procedure</b>:
+			To get the desired OD of 0.4 around 20h30 in the evening, the strains were transferred to new medium at different time points:
+			<ul>
+				<li> DH5&alpha; around 15:35</li>
+				<li> TOP10 around 16:40</li>
+				<li> <i> Pseudomonas </i> and BW25113 around 17:30 </li>
+			</ul>
+			200 &micro;L of each bacterial overnight culture was added to 20 mL of LB medium in a shake flask, and was then grown at 30&deg;C.
+		
+	<h2>Incubating the strains in the RPM for phenotype study in simulated microgravity</h2>
+		<p><i>Day4: 2016/07/20</i> <br>
+			<b>Investigator(s): Valentijn Broeken, Vincent de Bakker </b> <br>
+			<b>Procedure</b>: 
+			At 20:30 the OD values of the cultures were measured. By accident, the OD was measured at 546nm, while the OD had to be measured at 600nm. The OD-values were:</p>
+	
+	<table id="t01">
+	<tr>
+	 <th>Strain</th>
+	 <th> OD<sub>546nm</sub> </th>
+	 </tr>
+	<tr> 
+		<td> TOP10</td>
+		<td> 0.371 </td>
+	</tr>
+	<tr> 
+		<td> BW25113 </td>
+		<td> 0.420 </td>
+	</tr>
+	<tr> 
+		<td> Pseudomonas</td>
+		<td> 0.263 </td>
+	</tr>
+	<tr> 
+		<td> DH5&alpha; </td>
+		<td> 0.263 </td>
+	</tr>
+	</table>
+	
+	<p>The Pseudomonas was placed back in the incubater for another 45 minutes during the dilution steps of the other strains. After that, the OD was measured at 600nm and was found to be 0.750.
+	<br>
+	<br>
+	The anticipated OD<sub>600</sub> at this time would be 0.4. The bacterial cultures were diluted 10<sup>-6.5</sup> (100x > 100x > 50x) and 10<sup>-7 </sup>times (another 2x). Dilution steps were done in duplo and each of the two final dilutions per duplo were plated twice, one for 1g and one for 0g. There are thus four 10<sup>-6.5</sup> dilutions and four 10<sup>-7</sup> dilutions plated for each strain. Since the OD<sub>600</sub> was far too high for Pseudomonas, this culture was diluted 2x before the standard dilutions described above.
+	<br>
+	<br>
+	At 22:45h the plates were put at 30&degC besides (1g) or in the RPM (0g). It is however thought that the incubator's temperature is too low, because the next morning no colonies could be seen.
+	
+	<h2>Photographing colonies</h2>
+		<p><i>Day5: 2016/07/21</i> <br>
+			<b>Investigator(s): Valentijn Broeken, Wouter Liefting </b> <br>
+			<b>Procedure</b>: <br>
+			At 10:30: we looked at the plates but we didn't see any colonies yet. The plates were putted back.<br>
+			At 17:00: this time colonies were present. We took photos of all plates and putted them back.<br>
+			At 20:30: Unfortunately the tape we used wasn't strong enough so when we came back 4 hours later we found the plates had come loose and the RPM didn't rotate. We don't know how long it had been turning before this happened but we think it probably happened soon after we left. We still took photos and used duct-tape again to make sure the plates wouldn't come loose.
+		</p>
+	
+		<p><i>Day6: 2016/07/22</i> <br>
+			<b>Investigator(s): Wouter liefting </b> <br>
+			<b> Procedure </b>: <br>
+			At 10:00: new photo's of the colonies. Last photo's will be taken at the end of this day.<br>
+			At 15:00 new photo's of the colonies are taken. Again the tape (this time the duct-tape) got loose and the rotation stopt after max. 15 minutes. We need a construct to put our plates in to make it not only much easier to work with buth also more reliable. <br>
+			The plates are stored in the refrigerator on the 1st floor after these last photo's.
+		</p>
+	</body>
+</html>
