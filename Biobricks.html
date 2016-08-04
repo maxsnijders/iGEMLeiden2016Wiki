@@ -16,6 +16,17 @@
 
     <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/main?action=raw&ctype=text/css"/>
     <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/scripts/smoothscrolling?action=raw&ctype=text/css"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
+    <link rel="stylesheet" href="Style/fonts/Lato.css"/>
+
+    <link rel="stylesheet" href="style/main.css"/>
+    <script type="text/javascript" src="scripts/smooth-scrolling.js"></script>
+
+    <script type="text/javascript" src="libraries/three.min.js"/></script>
+
+    <script type="text/javascript" src="scripts/rpm-demo.js"/></script>
 
     <style type='text/css'>
       #top_title, #sideMenu{
@@ -29,14 +40,14 @@
       }
     </style>
 	<style>
-table {
+.biobricks table {
     width:100%;
 }
-table, th, td {
+.biobricks table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
-th, td {
+.biobricks th, td {
     padding: 5px;
     text-align: left;
 }
@@ -50,34 +61,15 @@ table#t01 th {
     background-color: black;
     color: white;
 }
+	
 </style>
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
   </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
-      <nav class="navbar navbar-default navbar-fixed-top" style='position: fixed; top: 15px;'>
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-              <img alt="iGEM" src="images/logo_iGEM_Leiden.png" width="40" style="position: relative; top: -10px;"/>
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">LEIDEN</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar" style='position: relative; top: -5px;'>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">OVERVIEW</a></li>
-              <li><a href="description.html">PROJECT</a></li>
-              <li><a href="events.html">EVENTS</a></li>
-			  <li><a href="science.html">SCIENCE</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      
+      <div w3-include-html="navbar.html"></div>
 
       <div id='header-background'>
 
@@ -104,7 +96,7 @@ table#t01 th {
               
             <h2 style='margin-bottom: 20px;'> Biobricks </h2>
 	
-		<table id="t01">
+		<table class="biobricks" id="t01">
 		<tr>
 			<th> <b> Name </b> </th>
 			<th><b> Web </b> </th>
@@ -223,6 +215,8 @@ table#t01 th {
 			<td> Kanamycin</td>
 		</tr>
 	</table>
-
+	<script>
+		w3IncludeHTML();
+	</script>
 	</body>
 </html>
