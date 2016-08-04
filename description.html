@@ -1,8 +1,7 @@
 <html>
-  <head>
-    <title> iGEM Leiden Wiki / Project </title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <head>
+    <title> iGEM Leiden Wiki : Project </title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
@@ -16,8 +15,19 @@
 
     <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/main?action=raw&ctype=text/css"/>
     <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/scripts/smoothscrolling?action=raw&ctype=text/css"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
+    <link rel="stylesheet" href="Style/fonts/Lato.css"/>
 
-    <style type='text/css'>
+    <link rel="stylesheet" href="style/main.css"/>
+    <script type="text/javascript" src="scripts/smooth-scrolling.js"></script>
+
+    <script type="text/javascript" src="libraries/three.min.js"/></script>
+
+    <script type="text/javascript" src="scripts/rpm-demo.js"/></script>
+
+	<style type='text/css'>
       #top_title, #sideMenu{
         display: none;
       }
@@ -28,7 +38,9 @@
         padding: 0;
       }
     </style>
-  </head>
+
+	
+ </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
@@ -43,17 +55,67 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">LEIDEN</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar" style='position: relative; top: -5px;'>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="index.html">OVERVIEW</a></li>
-              <li><a href="description.html">PROJECT</a></li>
-              <li><a href="events.html">EVENTS</a></li>
-            </ul>
-          </div>
+          <a class="navbar-brand" href="#">LEIDEN</a>
         </div>
-      </nav>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+			<a href="description.html">PROJECT</a>
+				<div class="dropdown-content">
+					<a href="description.html">DESCRIPTION</a>
+					<a href="Science.html"> DESIGN </a>
+					<a href="Bioreactor.html"> BIOREACTOR </a>
+					<a href="rpm_tekst.html"> RPM </a>
+					<!-- 
+					<a href="#"> ACHIEVEMENTS </a> -->
+				</div>
+			</li>
+			<li class="dorpdown">
+			<a href="#lab">LAB</a>
+				<div class="dropdown-content">
+				<!--	<a href="#"> OVERVIEW & RESULTS </a>
+					<a href="#"> LAB SAFETY </a> -->
+				</div>
+			</li>
+			<li class= "dropdown">
+			<a href="#modelling">MODELLING</a>
+			</li>
+			<li class= "dropdown">
+			<a href="events.html">OUTREACH</a>
+				<div class="dropdown-content">
+				<!--	<a href="#"> HUMAN PRACTICES </a>
+					<a href="#"> RIVM </a> -->
+					<a href="events.html"> EVENTS </a>
+				<!--	
+					<a href="#"> QUESTIONNAIRE </a>-->
+				</div>
+			</li>
+			<li class="dropdown">
+			<a href="team.html">THE TEAM</a>
+				<div class="dropdown-content">
+					<a href="team.html"> MEMBERS</a>
+					<a href="sponsors.html"> SPONSORS </a>
+				<!--	<a href="#"> COLLABORATIONS </a>
+					<a href="#"> PICTURES </a> -->
+				</div>           
+            </li>
+            <li class="dropdown">
+			<a href="labjournal.html">NOTEBOOK</a>
+				<div class="dropdown-content">
+					<a href="Biobricks.html"> BIOBRICKS </a>
+				<!--	<a href="#"> LABJOURNAL </a>
+					<a href="#"> PROTOCOLS </a>
+					<a href="#"> RPM </a>
+					<a href="#"> BUFFERS & MEDIA </a>
+					<a href="#"> INTERLAB </a> -->
+				</div>
+			</a>
+			</li>
+          </ul>
+        </div>
+      </div>
+	  </div>
+    </nav>
 
       <div id='header-background' style="background-image: url('http://2016.igem.org/wiki/images/2/23/Team-Leiden-images-project-image07.png');">
 
@@ -91,7 +153,7 @@
               <p><i> Mars is there, waiting to be reached </i> – Buzz Aldrin </p>
               <p>
               May 2008 – This was the first time NASA’s Phoenix lander detected perchlorates in arctic Martian soil. Still, more recently, the space agency spotted perchlorates in the Gale Crates with their Curiosity Rover, which landed on the red planet in 2012. According to investigator at the University of Arizona, the high levels of perchlorate present in the Martian soil and dust particles would be toxic to humans. <sup> 2 </sup> But how to avoid something so small, it gets stuck onto everything?
-              These dust particles present on Mars as well as on the Moon, are approximately 1.6μm, by comparison sand has a range of 0.0625 mm to 2 mm. Due to this small size, they might cause some serious problems. With the first Moon mission, these particles had several consequences. The astronauts’ suits were embedded in dust, which could not be brushed off. Also the Lunar module, including the atmosphere the astronauts breathed, was full of dust. When exposed to pure perchlorate salts, such as these dust particles on Mars, the toxin can be absorbed through the skin and may enter the lungs. This may cause irritations of the eyes, mucus and skin and could result in coughing and short breathing.
+              These dust particles present on Mars as well as on the Moon, are approximately 1.6&micro;m, by comparison sand has a range of 0.0625 mm to 2 mm. Due to this small size, they might cause some serious problems. With the first Moon mission, these particles had several consequences. The astronauts’ suits were embedded in dust, which could not be brushed off. Also the Lunar module, including the atmosphere the astronauts breathed, was full of dust. When exposed to pure perchlorate salts, such as these dust particles on Mars, the toxin can be absorbed through the skin and may enter the lungs. This may cause irritations of the eyes, mucus and skin and could result in coughing and short breathing.
               But there are also indirect effect of perchlorate present in these soils for the human settlement on Mars. If future calorizators ever want to cultivate edible crops from the grounds, detoxification is necessary. If not, crops could accumulate the toxic compound in their biomass and become a toxic source for humans. An irrigation study performed with lettuce grown in greenhouses on perchlorate soils with known concentrations, suggested an incorporation into plant tissue of a majority of the compound (around 79%). <sup> 3 </sup>
               However, the presence of perchlorates on Mars have some positive effects as well. For example, Perchlorates lower the freezing point of liquid water. With the salt concentrations, small amounts of water would make the water activity sufficient for the viability of terrestrial life on the planet. <sup> 4 </sup> </p>
 
@@ -104,11 +166,14 @@
                 <tr>
                   <td style='padding: 10px;'> <img height='150' src='images/project/image00.gif'> </td>
                   <td style='padding: 10px;'> <img height='150' src='images/project/image01.jpg'> </td>
+				  </tr>
+				  <tr>
                   <td style='padding: 10px;'> <img height='150' src='images/project/image02.jpg'> </td>
-                  <td style='padding: 10px;'> <img height='150' src='images/project/image03.jpg'> </td>
+                  <td style='padding: 10px;'> <img height='150' width='200'src='images/project/image03.jpg'> </td>
                 </tr>
               </table>
-              Figure 1. Sources of perchlorate contamination <br/>
+              Figure 1. Sources of perchlorate contamination 
+			  </p>
 
               <p>In 1998 perchlorate was first detected in drinking water in the Southern US, after which the EPA (environmental protection agency) added the compound to its Contaminate candidate list (CCL). Most of the contamination could be associated with military activities. More recent studies found contamination of ground- and surface waters in at least 26 states, which serve as drinking water sources for more than 16 million people. <sup> 5 </sup>  According to the EPA the estimated annual costs for public water systems to comply with a 4microgram/L of perchlorate limit are 120million dollar (in 2013). This is still less than the annual 320 million dollar costs of the Arsenic rule of 10 microgram/L. <sup> 6 </sup>
 
@@ -141,112 +206,104 @@
         </div>
       </div>
 
-      <div class="container-fluid text-center bg-grey">
-        <div class="row">
-          <div class='col-sm-12'>
-            <a class='smooth' href="#myPage" title="To Top">
-              <a class='smooth' href='#myPage'><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-            </a>
-          </div>
+    <footer class="container-fluid text-center bg-grey">
+      <div class="row">
+        <div class='col-sm-12'>
+          <a class='smooth' href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+          </a>
+        </div> 
+      </div> 
+
+      <div class="row" style='position: relative; left: -22px;'>
+        <div class="col-sm-4">
+          <ul style="list-style-type: none;">
+            <a class="navbar-brand" href="index.html">
+		  <img alt="iGEM" src="images/logo_iGEM_Leiden.png" width="150" style="position: relative; padding: -50px "/>
+		  </a>
+		  </ul>
+		 </div>
+        <div class="col-sm-4">
+		<ul style="list-style-type: none;">
+            <h3> Follow us </h3> 
+				<center>
+				<table>
+				<tr>
+					<td style='padding: 5px'>
+						<a id="adress" href="https://www.universiteitleiden.nl/en/science/biology" target="blank">
+							<div class="cf">
+								
+								
+								<img class="bottom" src='images/footer/image01.jpg' width="50px" >
+								<img class="top" src='images/footer/image00.jpg' width="50px" >
+							</div>
+						</a>
+					</td>
+					<td style='padding: 5px'>
+						<a id="mail" href="mailto:igemleiden2016@gmail.com" target="blank">
+							<div class="cf">
+								
+								
+								<img class="bottom" src='images/footer/image07.jpg' width="50px" >
+								<img class="top" src='images/footer/image06.jpg' width="50px" >
+							</div>
+						</a>
+					</td>
+					<td style='padding: 5px'>
+						<a id="mail" href="https://www.facebook.com/igemleiden/?fref=ts" target="blank">
+							<div class="cf">
+								
+								
+								<img class="bottom" src='images/footer/image03.jpg' width="50px" >
+								<img class="top" src='images/footer/image02.jpg' width="50px" >
+							</div>
+						</a>
+					</td>
+					<td style='padding: 5px'>
+						<a id="mail" href="https://twitter.com/igem_leiden" target="blank">
+							<div class="cf">
+								
+								
+								<img class="bottom" src='images/footer/image05.jpg' width="50px" >
+								<img class="top" src='images/footer/image04.jpg' width="50px" >
+							</div>
+						</a>
+					</td>
+					<td style='padding: 5px'>
+						<a id="mail" href="https://www.youtube.com/channel/UC8GsFSVutTryH-KqzgfvSfQ" target="blank">
+							<div class="cf">
+								
+								
+								<img class="bottom" src='images/footer/image09.jpg' width="50px" >
+								<img class="top" src='images/footer/image08.jpg' width="50px" >
+							</div>
+						</a>
+					</td>
+				</tr>
+				</table>
+			</center>
+          </ul>
         </div>
-
-
-        <div class="row" style='position: relative; left: -22px;'>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none;">
-              <!-- <li> About </li>
-              <li> Society </li>
-              <li> Project </li> -->
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none; list-style-image: none;">
-              <li> <a style='font-family: Montserrat, sans-serif; font-size: 12pt; color: rgb(51, 122, 183);' href='http://2016.igem.org/Team:Leiden/Templates'> Wiki templates </a> </li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none;">
-            </ul>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class='col-sm-12'>
-            <p style='text-align: center'> iGEM Leiden is an initiative by students from Leiden University </p>
-            <p>
-            	<center>
-		         	<table>
-		         		<tr>
-				      		<td style='padding: 20px;'> 
-									<div class="img">
-									  <a target="_blank" href="https://www.NEB.com">
-									  	<img height='50' src='images/sponsor/image00.png' >  
-									  </a>
-									</div>
-								</td>
-								<td style='padding: 20px;'> 
-								  <div class="img">
-									  <a target="_blank" href="http://www.airbusdefenceandspacenetherlands.nl">
-									  	<img height='50' src='images/sponsor/image02.png'  > 
-									  </a>
-									</div>
-								</td>
-									<td style='padding: 20px;'> 
-										<div class="img">
-											<a target="_blank" href="https://www.sarstedt.com/en/home">
-											  <img height='50' src='images/sponsor/image04.png' > 
-											</a>
-										</div>
-									</td>
-
-									<td style='padding: 20px;'> 
-										<div class="img">
-										  <a target="_blank" href="http://www.leidenuniv.nl">
-											 <img height='50' src='images/sponsor/image06.png' > 
-										  </a>
-										</div>
-									</td>	
-							</tr>
-							<tr>
-								<td style='padding: 20px;'> 
-									<div class="img">
-									  <a target="_blank" href="https://www.sigmaaldrich.com">
-										<img height='50' src='images/sponsor/image08.png' > 
-									  </a>
-								  	</div>
-								</td>
-								  
-								<td style='padding: 20px;'> 
-									<div class="img">
-										<a target="_blank" href="http://chdr.nl">
-											<img height='50' src='images/sponsor/image10.png'>  
-										</a>
-									</div>
-								</td>
-		
-
-								<td style='padding: 20px;'> 	 
-									<div class="img">
-										<a target="_blank" href="http://www.dsm.com/corporate/home.html">
-										 <img height='50' src='images/sponsor/image12.png'> 
-									  	</a>
-								 	 </div>
-							 	</td>
-							 
-								<td style='padding: 20px;'> 
-									<div class="img">
-										<a target="_blank" href="http://www.nature.com/nmicrobiol/">
-											<img height='50' src='images/sponsor/image14.png'>   
-										</a>
-									</div>
-								</td>
-							</tr>
-		         	</table>
-		         </center>
-            </p>
-          </div>
+        <div class="col-sm-4">
+			  <ul style="list-style-type: none;">
+				<h3>Contact us </h3>
+					<li>iGEM Team Leiden <br>
+					Sylviusweg 72, 2333BE Leiden <br>
+					Email:  igem@science.leidenuniv.nl <br>
+					Phone: +31 71 527 5052
+				</li>
+			</ul>
         </div>
       </div>
-    </div>
+
+      <div class="row">
+        <div class='col-sm-12'>
+          <p> iGEM Leiden is an intiative by students from Leiden University </p>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
+ 
+ 

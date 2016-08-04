@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title> iGEM Leiden Wiki : RPM </title>
+<html>
+ <head>
+    <title> iGEM Leiden Wiki : Bioreactor </title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -118,36 +117,63 @@
 	  </div>
     </nav>
 
-   
-	<div id='header-background'>
+      <div id='header-background'>
 
       </div>
       <div class="jumbotron text-center">
-        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> RPM </p>
+        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> Bioreactor </p>
       </div>
 
-    <!-- <img src='images/logo_iGEM_Leiden_Jumbo.png' width='300'/> 
-      <p style='font-size: 3em'> <i>E. colinizer</i></p>
-      <p style='font-size: 1em; position: relative; top: -25px; margin-bottom: -15px;'> Conquering Mars, one gene at a time </p> 
-      <a class='smooth' href='#abstract'><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>-->
-   
-	
-	<!-- HIER NOG EEN PLAATJE VAN DE RPM: images/project/rpm 
-	EN BEWEGEND BEELD VAN DE RPM -->
-	
-  <div id="abstract" style='margin-top: -55px;' class="container-fluid bg-white">
-      <div class="row">
-        <!--  <div class='col-sm-12' id='rpm-demo' style='height: 400px;'> -->
-			<h2> Random Positioning Machine </h2>
-			To be able to engineer an organism which can thrive on Mars, many factors need to be accounted for such as radiation, low temperature and partial gravity. Since Mars has about 0.4 times the Earth's gravity, gravity dependent processes could be severely affected. Gravity is dominant on large scales, and can seriously affect bacterial colony development, as is well known from previous studies (add reference of Sjoerd here, about the different expressed promoters). <br>
-			The Random Positioning Machine (RPM), developed by Airbus Defence and Space, can help us out by simulating partial earth gravity by constantly varying the orientation of bacterial colonies. It moves in such a way that Earth gravity, constantly pulling on the colony from a different direction, averages out to 0.4G. <br>
-			By isolating the RNA from bacteria grown at 0.4G, and performing/followed by RNA-seq, we will be able to see changes in promoter/gene activity compared to 1G (Earth gravity). Our goal is to find a promoter which is upregulated under partial Earth gravity and create a biobrick of this.
+      <div id="introduction" style='margin-top: -55px;' class="container-fluid bg-grey">
+        <div class="row">
+            <div class='col-sm-2'></div>
+            <div class='col-sm-8'>
+
+            </div>
+            <div class='col-sm-2'></div>
           </div>
         </div>
-      <!-- </div>
-    </div> -->
-	
-    <footer class="container-fluid text-center bg-grey">
+      </div>
+
+      <div id="Science behind the project" style='margin-top: -120px;' class="container-fluid bg-white">
+        <div class="row">
+            <div class='col-sm-2'></div>
+            <div class='col-sm-8' style='text-align: justify;'>
+              
+            <h2 style='margin-bottom: 20px;'> The Bioreactor </h2>
+			<p> The bioreactor is the final product of our project. We aim to develop a closed system that can – for the most part – sustain itself, through a combination of our modified <i> E. coli </i> and an autotroph bacteriumsuch as cyanobacteria) that can convert carbon dioxide to simple sugars. An example of acyanobacterium that can excrete its formed sugars is the PCC 7942 strain modified by Niederholtmeyer et al. (2010). <a href="#section1"> [1] </a></sup>
+			</p>
+			<p> Regolite (Martian soil) will enter the bioreactor after which it seals shut. Water will then flow through the regolite, exploiting the excellent dissolving property of perchlorate to cleanse the soil. The challengelies in cleansing the water from perchlorate, which we achieve through our modified <i> E. coli </i>. The contaminated water will pass through a series of tubes, where a carbon and a nitrogen source are added for incubation. When the mixture is complete, the perchlorate containing medium will travel to the <i> E. colonizer </i> compartment, where incubation will take place until perchlorate is reduced to sub toxic levels <sup> 1, 2 </sup>.To achieve minimal toxic levels, the incubated medium (containing mainly water, <i> E. colonizer </i> waste products and remaining perchlorate) will pass through a liquid filter, while the gasses pass through a high-efficiency particulate arrestance (HEPA) filter, to reduce remaining perchlorate to trace amounts.
+			</p>
+			<p> The filtered gasses produced during incubation (mainly carbon dioxide and oxygen) will be transported to the compartment where the autotroph bacterium resides, to saturate oxygen levels and turn carbon dioxide to simple sugars. These sugars can then be used to complement the medium of <i> E. colonizer </i>. This way, we recycle gasses and liquids as much as possible, avoiding the extremely high costs of transportation to Mars. The concentrated oxygen is transported to a tank for use in the habitation module.
+			</p>
+			<p>
+			Both tanks (that of E. colonizer and the cyanobacteria) will be covered by a thermal jacket, which acquires heat from the desalination unit’s waste heat. This unit ensures that chloride and other ions do not accumulate over consecutive runs. The cleansed, desalinated water will dissolve the perchlorate in a new batch of regolite optimally. The perchlorate-free regolite can be used safely for growth of crops.
+			</p>
+			<p>The outer hull will provide resistance against the harshest radiation, while allowing some light to enter the compartment of the autotroph bacterium.
+			</p>
+			
+			<hr></hr>
+			<p><b> Footnotes </b></p>
+			<p id="section1"> [1] The Environmental Protection Agency (EPA) suggests a Reference Dose (RfD) of 0.0007 mg/kg/day for perchlorate, corresponding to a drinking water equivalent level (DWEL) of 24.5 ppb. For more detail, we refer to the report by the Agency for Toxic Substances &amp; Disease Registry </p>
+	<p> <b> References: </b> </p> 
+
+              <p>
+                <ol>
+				  <li>  <a '#'> Niederholtmeyer H, Wolfstädter BT, Savage DF, Silver PA, Way JC. Engineering Cyanobacteria To Synthesize and Export Hydrophilic Products  .Applied and Environmental Microbiology. 2010;76(11):3462-3466. doi:10.1128/AEM.00202-10. </a> </li>
+                  <li>  <a '#'> http://www.atsdr.cdc.gov/phs/phs.asp?id=892&amp;tid=181#bookmark09 </a> </li>
+                </ol>
+              </p>
+            </div>
+			</div>
+            <div class='col-sm-2'></div>
+          </div>
+        </div>
+      </div>
+
+     
+
+     <footer class="container-fluid text-center bg-grey">
       <div class="row">
         <div class='col-sm-12'>
           <a class='smooth' href="#myPage" title="To Top">

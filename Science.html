@@ -1,7 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title> iGEM Leiden Wiki : RPM </title>
+    <title> iGEM Leiden Wiki : Design </title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -41,7 +40,7 @@
     </style>
 
 	
- </head>
+</head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
@@ -117,37 +116,78 @@
       </div>
 	  </div>
     </nav>
-
-   
-	<div id='header-background'>
+      <div id='header-background'>
 
       </div>
       <div class="jumbotron text-center">
-        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> RPM </p>
+        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> Design </p>
       </div>
 
-    <!-- <img src='images/logo_iGEM_Leiden_Jumbo.png' width='300'/> 
-      <p style='font-size: 3em'> <i>E. colinizer</i></p>
-      <p style='font-size: 1em; position: relative; top: -25px; margin-bottom: -15px;'> Conquering Mars, one gene at a time </p> 
-      <a class='smooth' href='#abstract'><i class="fa fa-angle-down fa-5x" aria-hidden="true"></i></a>-->
-   
-	
-	<!-- HIER NOG EEN PLAATJE VAN DE RPM: images/project/rpm 
-	EN BEWEGEND BEELD VAN DE RPM -->
-	
-  <div id="abstract" style='margin-top: -55px;' class="container-fluid bg-white">
-      <div class="row">
-        <!--  <div class='col-sm-12' id='rpm-demo' style='height: 400px;'> -->
-			<h2> Random Positioning Machine </h2>
-			To be able to engineer an organism which can thrive on Mars, many factors need to be accounted for such as radiation, low temperature and partial gravity. Since Mars has about 0.4 times the Earth's gravity, gravity dependent processes could be severely affected. Gravity is dominant on large scales, and can seriously affect bacterial colony development, as is well known from previous studies (add reference of Sjoerd here, about the different expressed promoters). <br>
-			The Random Positioning Machine (RPM), developed by Airbus Defence and Space, can help us out by simulating partial earth gravity by constantly varying the orientation of bacterial colonies. It moves in such a way that Earth gravity, constantly pulling on the colony from a different direction, averages out to 0.4G. <br>
-			By isolating the RNA from bacteria grown at 0.4G, and performing/followed by RNA-seq, we will be able to see changes in promoter/gene activity compared to 1G (Earth gravity). Our goal is to find a promoter which is upregulated under partial Earth gravity and create a biobrick of this.
+      <div id="introduction" style='margin-top: -55px;' class="container-fluid bg-grey">
+        <div class="row">
+            <div class='col-sm-2'></div>
+            <div class='col-sm-8'>
+
+            </div>
+            <div class='col-sm-2'></div>
           </div>
         </div>
-      <!-- </div>
-    </div> -->
-	
-    <footer class="container-fluid text-center bg-grey">
+      </div>
+
+      <div id="Science behind the project" style='margin-top: -120px;' class="container-fluid bg-white">
+        <div class="row">
+            <div class='col-sm-2'></div>
+            <div class='col-sm-8' style='text-align: justify;'>
+              
+            <h2 style='margin-bottom: 20px;'> The science behind the project </h2>
+				<p>Martian soil is contaminated with a toxic compound, perchlorate, making human life on mars impossible. For our project we use bacteria, which contain a perchlorate reduction system, to eliminate perchlorate from Martian soil. There are several bacteria that can already reduce perchlorate, for example Dechloromonas aromatica. However the model organism <i>E.coli</i> is a better suited bacterium to work with in this project, since it is easier to handle. Since E.coli does not contain a perchlorate reduction system, we transformed the E.coli cells from the bacterial strain DH5α with genes encoding for the perchlorate reduction system derived from Dechloromonas aromatica. 
+				<br>
+				Another aspect of our project is the influence of the gravity on mars on the bacterial growth. This is performed using an random positioning machine (RPM). The bacterial growth under normal gravity and the gravity on mars are compared.
+				</p>
+			
+				<p>
+				<i><b> Transformation of E.coli DH5&alpha; </i></b>
+				</p>
+				<p>
+				Genes coding for perchlorate reduction were introduced in the E.coli DH5α strain. These genes used for the transformation are derived from Dechloromonas aromatica. With these genes these, perchlorate reducing bacteria like Dechloromonas aromatica can reduce perchlorate into chlorite (ClO<sub>2</sub>) with perchlorate reductase <sup>2</sup> Subsequently, the bacteria can convert chlorite into oxygen (O<sub>2</sub>) and chloride (Cl<sup>-</sup>) with chlorite dismutase. The sequence coding for these genes were acquired from a gene database<sup>1</sup> and codon optimization for <i> E.coli </i> was performed. 
+				</p>
+				 
+               <p> The genes encoding for perchlorate reductase and chlorite dismutase from <i>Dechloromonas aromatica </i>are shown in the figure below: </p>
+           
+              <img style='width: 100%;' src='images/project/image05.jpg'>
+			 
+			<b> Figure 1. </b><i> The perchlorate reduction genomic island of Dechloromonas aromatica. This includes all the genes necessary for the reduction of perchlorate <sup>3 </sup>. </i>
+			<br>
+			<br>
+        <p> Upstream of the FNR/RpoN promoter a group of regulatory genes is present, these genes were not used. The genes downstream of the RpoN promotor are the genes with which the E. coli cells were transformed. The genes pcrA, B, C and D were cloned into one vector, with the use of Gibson assembly. Secondly the genes DHC and QDH, the membrane-associated proteins were cloned together into another vector. Finally, cld and moaA will be cloned separately in two vectors. First the E.coli cells were made competent and thereafter transformed with the plasmids containing the genes encoding for the perchlorate reduction system. </p>
+		<p> There are a lot of previously made BioBricks. We can choose from a variety of constitutive and inducible promoters to express the genes necessary for perchlorate reduction in E.coli. Next to these promotors other BioBricks may be helpful for our project. For example some BioBricks which can function as an O2 sensor or a promotor which is regulated by the presence of Oxygen. </p>
+		<p> We choose E.coli as a host because of the extensive molecular knowledge, vast amount of available BioBricks and phylogenetical similarities to the perchlorate reducing bacteria. </p>
+		<p>After the transformation, experiments were performed to determine whether the transformation had succeeded. This was performed by checking whether oxygen was formed by adding the transformed bacteria to perchlorate. </p>
+	  
+	  <p> <i><b> Random positioning machine (RPM)</i></b></p>
+	  <p>Four strains, Pseudomonas putida and three different E. coli strains, were used. These strains were spread on agar plates and these plates were kept under different gravities: the gravity on earth and the gravity on Mars.
+ 	<br>Thereafter, with RNA-sequencing there was sought for a promotor which is active by the gravity of Mars. Using differential gene-expression.</p>
+
+		
+      <p> <b> References: </b> </p> 
+
+              <p>
+                <ol>
+				  <li>  <a '#'> NCBI </a> </li>
+                  <li>  <a '#'> Bender, K. S., Shang, C., Chakraborty, R., Belchik, S. M., Coates, J. D., & Achenbach, L. A. (2005). Identification, characterization, and classification of genes encoding perchlorate reductase. Journal of Bacteriology, 187(15), 5090-5096 </a> </li>
+                  <li> <a '#'>Melnyk, R. A., Clark, I. C., Liao, A., & Coates, J. D. (2014). Transposon and deletion mutagenesis of genes involved in perchlorate reduction in Azospira suillum PS. MBio, 5(1), e00769-13 </a> </li>
+                </ol>
+              </p>
+            </div>
+			</div>
+            <div class='col-sm-2'></div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <footer class="container-fluid text-center bg-grey">
       <div class="row">
         <div class='col-sm-12'>
           <a class='smooth' href="#myPage" title="To Top">
