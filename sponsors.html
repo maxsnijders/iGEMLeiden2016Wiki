@@ -38,84 +38,14 @@
         padding: 0;
       }
     </style>
-
+	<script src="http://www.w3schools.com/lib/w3data.js"></script>
 	
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
-      <nav class="navbar navbar-default navbar-fixed-top" style='position: fixed; top: 15px;'>
-        <div class="container">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
-              <img alt="iGEM" src="images/logo_iGEM_Leiden.png" width="40" style="position: relative; top: -10px;"/>
-            </a>
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          <a class="navbar-brand" href="#">LEIDEN</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-			<a href="description.html">PROJECT</a>
-				<div class="dropdown-content">
-					<a href="description.html">DESCRIPTION</a>
-					<a href="Science.html"> DESIGN </a>
-					<a href="Bioreactor.html"> BIOREACTOR </a>
-					<a href="rpm_tekst.html"> RPM </a>
-					<!-- 
-					<a href="#"> ACHIEVEMENTS </a> -->
-				</div>
-			</li>
-			<li class="dorpdown">
-			<a href="#lab">LAB</a>
-				<div class="dropdown-content">
-				<!--	<a href="#"> OVERVIEW & RESULTS </a>
-					<a href="#"> LAB SAFETY </a> -->
-				</div>
-			</li>
-			<li class= "dropdown">
-			<a href="#modelling">MODELLING</a>
-			</li>
-			<li class= "dropdown">
-			<a href="events.html">OUTREACH</a>
-				<div class="dropdown-content">
-				<!--	<a href="#"> HUMAN PRACTICES </a>
-					<a href="#"> RIVM </a> -->
-					<a href="events.html"> EVENTS </a>
-				<!--	
-					<a href="#"> QUESTIONNAIRE </a>-->
-				</div>
-			</li>
-			<li class="dropdown">
-			<a href="team.html">THE TEAM</a>
-				<div class="dropdown-content">
-					<a href="team.html"> MEMBERS</a>
-					<a href="sponsors.html"> SPONSORS </a>
-				<!--	<a href="#"> COLLABORATIONS </a>
-					<a href="#"> PICTURES </a> -->
-				</div>           
-            </li>
-            <li class="dropdown">
-			<a href="labjournal.html">NOTEBOOK</a>
-				<div class="dropdown-content">
-					<a href="Biobricks.html"> BIOBRICKS </a>
-				<!--	<a href="#"> LABJOURNAL </a>
-					<a href="#"> PROTOCOLS </a>
-					<a href="#"> RPM </a>
-					<a href="#"> BUFFERS & MEDIA </a>
-					<a href="#"> INTERLAB </a> -->
-				</div>
-			</a>
-			</li>
-          </ul>
-        </div>
-      </div>
-	  </div>
-    </nav>
+      
+      <div w3-include-html="navbar.html"></div>
 
      <div id='header-background'>
 
@@ -344,6 +274,8 @@
         </div>
       </div>
     </footer>
-
+		<script>
+			w3IncludeHTML();
+		</script>
   </body>
 </html>
