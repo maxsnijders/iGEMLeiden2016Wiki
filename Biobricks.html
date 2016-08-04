@@ -40,14 +40,14 @@
       }
     </style>
 	<style>
-.biobricks table {
+table.biobricks {
     width:100%;
 }
-.biobricks table, th, td {
+.biobricks table, .biobricks th, .biobricks td {
     border: 1px solid black;
     border-collapse: collapse;
 }
-.biobricks th, td {
+.biobricks th, .biobricks td. {
     padding: 5px;
     text-align: left;
 }
@@ -100,9 +100,9 @@ table#t01 th {
 		<tr>
 			<th> <b> Name </b> </th>
 			<th><b> Web </b> </th>
-			<th><b> Description</th>
-			<th><b> Length </th>
-			<th><b> Type </th>
+			<th><b> Description </b> </th>
+			<th><b> Length </b></th>
+			<th><b> Type </b> </th>
 		</tr>
 		 <tr>
 			<td>K258005</td>
@@ -178,13 +178,13 @@ table#t01 th {
 	
 	
 	<h2 style='margin-bottom: 20px;'> Backbones </h2>
-		<table id="t01">
+		<table class="biobricks" id="t01">
 			<tr>
 			<th> <b> Name </b> </th>
 			<th><b> Web </b> </th>
-			<th><b> Description</th>
-			<th><b> Length </th>
-			<th><b> Resistance </th>
+			<th><b> Description</b></th>
+			<th><b> Length </b></th>
+			<th><b> Resistance</b> </th>
 		</tr>
 		 <tr>
 			<td>pSB1A3</td>
@@ -215,6 +215,12 @@ table#t01 th {
 			<td> Kanamycin</td>
 		</tr>
 	</table>
+	</div>
+	</div>
+	</div>
+	
+	<div w3-include-html="footer.html"></div>
+	
 	<script>
 		w3IncludeHTML();
 	</script>
