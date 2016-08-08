@@ -36,6 +36,9 @@
 
     <script src="scripts/include-html.js"></script>
   <script type="text/javascript" src="scripts/table-layout.js"></script>
+
+  <script type="text/javascript" src="scripts/global.js"></script>
+
   <script type="text/javascript">
       window.photos = [
         { path: 'image00.gif'},
@@ -53,6 +56,10 @@
         window.tableAutoLayout.addTable( "#project_description_images", window.photos, "#project-description-image", 170, function( photo, cell ){
           cell.find("img").attr( 'src', 'images/project/' + photo.path );
           return cell;
+        } );
+
+        window.include( '#footer_html', 'footer.html', function(){
+          window.footer.load();
         } );
       });
   </script>
@@ -151,6 +158,6 @@
         </div>
       </div>
 
-   	<div w3-include-html="footer.html"></div>
+   	<div id='footer_html'></div>
   </body>
 </html>
