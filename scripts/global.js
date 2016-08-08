@@ -17,7 +17,8 @@ window.footer.load = function(){
   } );
 }
 
-window.include = function( targetSelector, sourcePage, completionHandler ){
+window.include = function( targetSelector, completionHandler ){
+  var sourcePage = $( targetSelector ).attr( 'data-source' );
   $.get( sourcePage, function( data ){
       $( targetSelector ).html( data );
       completionHandler();

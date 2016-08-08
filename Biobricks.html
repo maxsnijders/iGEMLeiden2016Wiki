@@ -65,7 +65,7 @@ table#t01 th {
       $( window ).ready(function(){
         // Load the includes
         w3IncludeHTML();
-        window.include( '#footer_html', 'footer.html', function(){
+        window.include( '#footer_html', function(){
           window.footer.load();
         } );
       });
@@ -225,6 +225,6 @@ table#t01 th {
 	</div>
 	</div>
 
-	<div id="footer_html"></div>
+  <div id="footer_html" data-source="footer.html"></div>
 	</body>
 </html>

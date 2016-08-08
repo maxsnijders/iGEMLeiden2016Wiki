@@ -41,7 +41,7 @@
         $( window ).ready(function(){
           // Load the includes
           w3IncludeHTML();
-          window.include( '#footer_html', 'footer.html', function(){
+          window.include( '#footer_html', function(){
             window.footer.load();
           } );
         });
@@ -95,6 +95,6 @@ Like the beginning of life on earth, bacteria can possibly be the beginning of l
       </div> -->
 
 
-    <div id="footer_html"></div>
+      <div id="footer_html" data-source="footer.html"></div>
   </body>
 </html>
