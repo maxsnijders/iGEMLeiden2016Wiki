@@ -5,27 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/libraries/bootstrap-3-3-6-dist/css/bootstrap-min?action=raw&ctype=text/css">
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/libraries/font-awesome-4-6-3/css/font-awesome-min?action=raw&ctype=text/css" type='text/css'/>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/libraries/jquery-1-12-4?action=raw&ctype=text/js"></script>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/libraries/bootstrap-3-3-6-dist/js/bootstrap-min?action=raw&ctype=text/js"></script>
+    <link rel="stylesheet" href="libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/font-awesome-4.6.3/css/font-awesome.min.css" type='text/css'/>
+    <script type="text/javascript" src="libraries/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/fonts/Montserrat?action=raw&ctype=text/css"/>
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/fonts/Lato?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
+    <link rel="stylesheet" href="style/fonts/Lato.css"/>
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/main?action=raw&ctype=text/css"/>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/scripts/smoothscrolling?action=raw&ctype=text/css"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <link rel="stylesheet" href="style/main.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
     <link rel="stylesheet" href="Style/fonts/Lato.css"/>
 
     <link rel="stylesheet" href="style/main.css"/>
     <script type="text/javascript" src="scripts/smooth-scrolling.js"></script>
-
-    <script type="text/javascript" src="libraries/three.min.js"/></script>
-
-    <script type="text/javascript" src="scripts/rpm-demo.js"/></script>
 
 	<style type='text/css'>
       #top_title, #sideMenu{
@@ -39,12 +34,12 @@
       }
     </style>
 	<script src="http://www.w3schools.com/lib/w3data.js"></script>
-	
+
 </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
-      
+
       <div w3-include-html="navbar.html"></div>
       <div id='header-background'>
 
@@ -68,24 +63,24 @@
         <div class="row">
             <div class='col-sm-2'></div>
             <div class='col-sm-8' style='text-align: justify;'>
-              
+
             <h2 style='margin-bottom: 20px;'> The science behind the project </h2>
-				<p>Martian soil is contaminated with a toxic compound, perchlorate, making human life on mars impossible. For our project we use bacteria, which contain a perchlorate reduction system, to eliminate perchlorate from Martian soil. There are several bacteria that can already reduce perchlorate, for example Dechloromonas aromatica. However the model organism <i>E.coli</i> is a better suited bacterium to work with in this project, since it is easier to handle. Since E.coli does not contain a perchlorate reduction system, we transformed the E.coli cells from the bacterial strain DH5α with genes encoding for the perchlorate reduction system derived from Dechloromonas aromatica. 
+				<p>Martian soil is contaminated with a toxic compound, perchlorate, making human life on mars impossible. For our project we use bacteria, which contain a perchlorate reduction system, to eliminate perchlorate from Martian soil. There are several bacteria that can already reduce perchlorate, for example Dechloromonas aromatica. However the model organism <i>E.coli</i> is a better suited bacterium to work with in this project, since it is easier to handle. Since E.coli does not contain a perchlorate reduction system, we transformed the E.coli cells from the bacterial strain DH5α with genes encoding for the perchlorate reduction system derived from Dechloromonas aromatica.
 				<br>
 				Another aspect of our project is the influence of the gravity on mars on the bacterial growth. This is performed using an random positioning machine (RPM). The bacterial growth under normal gravity and the gravity on mars are compared.
 				</p>
-			
+
 				<p>
 				<i><b> Transformation of E.coli DH5&alpha; </i></b>
 				</p>
 				<p>
-				Genes coding for perchlorate reduction were introduced in the E.coli DH5α strain. These genes used for the transformation are derived from Dechloromonas aromatica. With these genes these, perchlorate reducing bacteria like Dechloromonas aromatica can reduce perchlorate into chlorite (ClO<sub>2</sub>) with perchlorate reductase <sup>2</sup> Subsequently, the bacteria can convert chlorite into oxygen (O<sub>2</sub>) and chloride (Cl<sup>-</sup>) with chlorite dismutase. The sequence coding for these genes were acquired from a gene database<sup>1</sup> and codon optimization for <i> E.coli </i> was performed. 
+				Genes coding for perchlorate reduction were introduced in the E.coli DH5α strain. These genes used for the transformation are derived from Dechloromonas aromatica. With these genes these, perchlorate reducing bacteria like Dechloromonas aromatica can reduce perchlorate into chlorite (ClO<sub>2</sub>) with perchlorate reductase <sup>2</sup> Subsequently, the bacteria can convert chlorite into oxygen (O<sub>2</sub>) and chloride (Cl<sup>-</sup>) with chlorite dismutase. The sequence coding for these genes were acquired from a gene database<sup>1</sup> and codon optimization for <i> E.coli </i> was performed.
 				</p>
-				 
+
                <p> The genes encoding for perchlorate reductase and chlorite dismutase from <i>Dechloromonas aromatica </i>are shown in the figure below: </p>
-           
+
               <img style='width: 100%;' src='images/project/image05.jpg'>
-			 
+
 			<b> Figure 1. </b><i> The perchlorate reduction genomic island of Dechloromonas aromatica. This includes all the genes necessary for the reduction of perchlorate <sup>3 </sup>. </i>
 			<br>
 			<br>
@@ -93,13 +88,13 @@
 		<p> There are a lot of previously made BioBricks. We can choose from a variety of constitutive and inducible promoters to express the genes necessary for perchlorate reduction in E.coli. Next to these promotors other BioBricks may be helpful for our project. For example some BioBricks which can function as an O2 sensor or a promotor which is regulated by the presence of Oxygen. </p>
 		<p> We choose E.coli as a host because of the extensive molecular knowledge, vast amount of available BioBricks and phylogenetical similarities to the perchlorate reducing bacteria. </p>
 		<p>After the transformation, experiments were performed to determine whether the transformation had succeeded. This was performed by checking whether oxygen was formed by adding the transformed bacteria to perchlorate. </p>
-	  
+
 	  <p> <i><b> Random positioning machine (RPM)</i></b></p>
 	  <p>Four strains, Pseudomonas putida and three different E. coli strains, were used. These strains were spread on agar plates and these plates were kept under different gravities: the gravity on earth and the gravity on Mars.
  	<br>Thereafter, with RNA-sequencing there was sought for a promotor which is active by the gravity of Mars. Using differential gene-expression.</p>
 
-		
-      <p> <b> References: </b> </p> 
+
+      <p> <b> References: </b> </p>
 
               <p>
                 <ol>
@@ -115,7 +110,7 @@
         </div>
       </div>
 
-     
+
 
       <div w3-include-html="footer.html"></div>
     <script>
