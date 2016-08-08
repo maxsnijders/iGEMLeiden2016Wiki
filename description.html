@@ -35,7 +35,27 @@
     </style>
 
 	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <script type="text/javascript" src="scripts/table-layout.js"></script>
+  <script type="text/javascript">
+      window.photos = [
+        { path: 'image00.gif'},
+        { path: 'image01.jpg'},
+        { path: 'image02.jpg'},
+        { path: 'image03.jpg'},
+      ];
 
+      $( window ).ready(function(){
+
+        // Load the includes
+        w3IncludeHTML();
+
+        // Add auto-layout-tables
+        window.tableAutoLayout.addTable( "#project_description_images", window.photos, "#project-description-image", 170, function( photo, cell ){
+          cell.find("img").attr( 'src', 'images/project/' + photo.path );
+          return cell;
+        } );
+      });
+  </script>
 
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -59,6 +79,13 @@
             </div>
             <div class='col-sm-2'></div>
           </div>
+        </div>
+      </div>
+
+      <!-- A cache used to load html templates -->
+      <div id='template-cache' style='display: none;'>
+        <div id='project-description-image' style='padding: 10px;'>
+          <img src="images/Team/image03.jpg" width="150px"/>
         </div>
       </div>
 
@@ -89,16 +116,7 @@
 
               On earth perchlorate salts are formed naturally in small amounts in our environment. However, the biggest source of perchlorate contamination arises from the use of nitrate fertilizers and the chemical industry. Here the compound is used for a variety of products, of which more than 90% is manufactured as ammonium perchlorate to be used as rocket and missile engine. Also in explosives, flares, fireworks and other industrial processes, this compound is commonly found. Every time someone illuminates beautiful blue-colored firework, think about perchlorate going in the air. </p>
 
-              <table style='text-align: center;'>
-                <tr>
-                  <td style='padding: 10px;'> <img height='150' src='images/project/image00.gif'> </td>
-                  <td style='padding: 10px;'> <img height='150' src='images/project/image01.jpg'> </td>
-				  </tr>
-				  <tr>
-                  <td style='padding: 10px;'> <img height='150' src='images/project/image02.jpg'> </td>
-                  <td style='padding: 10px;'> <img height='150' width='200'src='images/project/image03.jpg'> </td>
-                </tr>
-              </table>
+              <table style='text-align: center;' id='project_description_images'></table>
               Figure 1. Sources of perchlorate contamination
 			  </p>
 
@@ -134,8 +152,5 @@
       </div>
 
    	<div w3-include-html="footer.html"></div>
-		<script>
-			w3IncludeHTML();
-		</script>
   </body>
 </html>

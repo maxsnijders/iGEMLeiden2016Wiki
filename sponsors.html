@@ -34,151 +34,126 @@
       }
     </style>
 	<script src="http://www.w3schools.com/lib/w3data.js"></script>
+	<script type="text/javascript" src="scripts/table-layout.js"></script>
+	<script type="text/javascript">
+			window.sponsors = [
+				{ logo : 'image00.png', url : 'https://www.NEB.com' },
+				{ logo : 'image04.png', url : 'https://www.sarstedt.com/en/home' },
+				{ logo : 'image19.jpg', url : 'http://www.baseclear.com/' },
+				{ logo : 'image08.png', url : 'https://www.sigmaaldrich.com' },
+				{ logo : 'image10.png', url : 'http://chdr.nl' },
+				{ logo : 'image12.png', url : 'http://www.dsm.com/corporate/home.html' },
+				{ logo : 'image14.png', url : 'http://www.nature.com/nmicrobiol/' },
+				{ logo : 'image18.png', url : 'http://www.snapgene.com/' },
+				{ logo : 'image20.png', url : 'http://www.esa.int/dut/ESA_in_your_country/The_Netherlands' },
+			];
 
+			$( window ).ready(function(){
+
+				// Load the includes
+				w3IncludeHTML();
+
+				// Add auto-layout-tables
+				window.tableAutoLayout.addTable( "#sponsor_logo_table", window.sponsors, "#sponsor-logo-cell", 230, function( sponsor, cell ){
+					cell.find("img").attr( 'src', 'images/sponsor/' + sponsor.logo );
+					cell.find("a").attr( 'href', sponsor.url );
+					return cell;
+				} );
+			});
+	</script>
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
-      <div id='nav-background' style='position: fixed; top: 15px;'></div>
+    	<div id='nav-background' style='position: fixed; top: 15px;'></div>
 
-      <div w3-include-html="navbar.html"></div>
+    	<div w3-include-html="navbar.html"></div>
 
-     <div id='header-background'>
+    	<div id='header-background'>
 
-      </div>
-      <div class="jumbotron text-center">
+    	</div>
+    	<div class="jumbotron text-center">
         <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> Sponsors </p>
       </div>
 
-	   <div id="Underline h2" style='margin-top: -55px;' class="container-fluid bg-white">
+	   	<div id="h2" style='margin-top: -55px;' class="container-fluid bg-white">
         <div class="row">
            <div class='col-sm-2'></div>
            <div class='col-sm-8'>
-
-
-					<h2>Thanks! </h2>
-							<p>
-							We would like to thank all our sponsors & partners for making this project possible. In particular we would like to thank IDT for their generous support. Furthermore, we would like to thank Airbus Space and Defence Netherlands for their generous contribution to the Random Positioning Machine (RPM).
-							</p>
-							<div id="Underline h2" style='margin-top: -55px;' class="container-fluid bg-grey">
-									<div class="row">
-										 <div class='col-sm-12'>
-									<div class="row">
-										<div class='col-sm-4' style='padding: 50px;'>
-								<a target="_blank" href="http://eu.idtdna.com/site"><img src="images/sponsor/image16.png" width="350px" align="middle"></a>
-								</div>
-								<div class= 'col-sm-2'> </div>
-								<div class='col-sm-6' style='padding: 100px:'>
-								<h2> Integrated DNA technologies </h2>
-								Integrated DNA technologies is a main supllier of oligonucleotiden for the research and life sciences market. Oligonucleotides are short strands of DNA that can be synthesized. This synthesized DNA is comparable to oligonucleotides existing in nature and can have various apllications in synthetic biology e.g. PCR.
-							</div>
-							</div>
-							<div class="row">
-								<div class='col-sm-4' style='padding: 50px;'>
-								 <a target="_blank" href="http://www.airbusdefenceandspacenetherlands.nl"><img src='images/sponsor/Image02.png' width="350px" align="middle"></a>
-								 </div>
-								 <div class= 'col-sm-2'> </div>
-								 <div class='col-sm-6' style='padding: 100px:'>
-								<h2> Airbus Defence and Space Netherlands </h2>
-								Airbus Defence and Space Netherlands delivers various products, including satellite instruments and launch rocket structures. Their products also include a random positioning machine (RPM). The RPM is capable of simulating micro-gravity, making it possible to simulate gravity on different planets. Thereby this machine can be used in different scientific disciplinces, including biology.
-							</div>
-							</div>
-							<div class="row">
-								<div class='col-sm-4' style='padding: 50px;'>
-								 <a target="_blank" href="http://www.leidenuniv.nl"><img  src='images/sponsor/image06.png' width="350px" align= "middle"></a>
-								</div>
-								<div class= 'col-sm-2'> </div>
-								<div class='col-sm-6' style='padding: 100px:'>
-								<h2> Leiden University </h2>
-								The university of Leiden is an international orientated university with a broad range of study programmes, ranging from biology to Japanese literature. Furthermore, Leiden University is the oldest university in the Netherlands with notable alumni, including the current king of the Netherlands.
-							</div>
-							</div>
+						<h2>Thanks! </h2>
+						<p>
+						We would like to thank all our sponsors & partners for making this project possible. In particular we would like to thank IDT for their generous support. Furthermore, we would like to thank Airbus Space and Defence Netherlands for their generous contribution to the Random Positioning Machine (RPM).
+						</p>
 					</div>
-					</div>
+					<div class='col-sm-2'></div>
+				</div>
 			</div>
 
-	<div id="Underline h2" style='margin-top: -55px;' class="container-fluid bg-white">
-        <div class="row">
-           <div class='col-sm-12'>
+			<div class='container-fluid bg-grey' style='margin-top: -55px;'>
+				<div class='row'>
+					<div class='col-sm-2'></div>
+					<div class='col-sm-4' style='vertical-align: middle; margin-top: 20px;'>
+						<a target="_blank" href="http://eu.idtdna.com/site"><img src="images/sponsor/image16.png" style='width: 100%;' align="middle"></a>
+					</div>
+					<div class='col-sm-4'>
+						<h2> Integrated DNA technologies </h2>
+						<p> Integrated DNA technologies is a main supllier of oligonucleotiden for the research and life sciences market. Oligonucleotides are short strands of DNA that can be synthesized. This synthesized DNA is comparable to oligonucleotides existing in nature and can have various apllications in synthetic biology e.g. PCR. </p>
+					</div>
+					<div class='col-sm-2'></div>
+				</div>
+			</div>
+			</div>
+			<div class='container-fluid bg-grey' style='margin-top: -100px;'>
+				<div class='row'>
+					<div class='col-sm-2'></div>
+					<div class='col-sm-4'>
+						<h2> Airbus Defence and Space Netherlands </h2>
+						<p> Airbus Defence and Space Netherlands delivers various products, including satellite instruments and launch rocket structures. Their products also include a random positioning machine (RPM). The RPM is capable of simulating micro-gravity, making it possible to simulate gravity on different planets. Thereby this machine can be used in different scientific disciplinces, including biology. </p>
+					</div>
+					<div class='col-sm-4' style='vertical-align: middle; margin-top: 20px;'>
+						<a target="_blank" href="http://www.airbusdefenceandspacenetherlands.nl"><img src='images/sponsor/Image02.png' style='width: 100%;' align="middle"></a>
+					</div>
 
-<h2 > Sponsors & Partners </h2>
-		<div id="sponsors">
-			<table>
-				<tr>
-					<td style='padding: 50px;'><a target="_blank" href="https://www.NEB.com">
-					  <img src='images/sponsor/image00.png' width="250px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="https://www.sarstedt.com/en/home">
-					<img src='images/sponsor/image04.png' width="250px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="http://www.baseclear.com/">
-					<img  src='images/sponsor/image19.jpg' width="250px">
-					</a></td>
-				</tr>
-				<tr>
-					<td style='padding: 50px;'><a target="_blank" href="https://www.sigmaaldrich.com">
-					  <img src='images/sponsor/image08.png' width="200px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="http://chdr.nl">
-					  <img src='images/sponsor/image10.png' width="200px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="http://www.dsm.com/corporate/home.html">
-					  <img src='images/sponsor/image12.png' width="200px">
-					</a></td>
-				</tr>
-				<tr>
-					<td style='padding: 50px;'><a target="_blank" href="http://www.nature.com/nmicrobiol/">
-					  <img src='images/sponsor/image14.png' width="200px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="http://www.snapgene.com/">
-					  <img src='images/sponsor/image18.png' width="200px">
-					</a></td>
-					<td style='padding: 50px;'><a target="_blank" href="http://www.esa.int/dut/ESA_in_your_country/The_Netherlands">
-					  <img src='images/sponsor/image20.png' width="200px">
-					</a></td>
-				</tr>
-			</table>
+					<div class='col-sm-2'></div>
+				</div>
+			</div>
+			<div class='container-fluid bg-grey' style='margin-top: -100px;'>
+			<div class='row'>
+				<div class='col-sm-2'></div>
+				<div class='col-sm-4' style='vertical-align: middle;  margin-top: 20px;'>
+					<a target="_blank" href="http://www.leidenuniv.nl"><img  src='images/sponsor/image06.png' style='width: 100%;' align= "middle"></a>
+				</div>
+				<div class='col-sm-4'>
+					<h2> Leiden University </h2>
+					<p> The university of Leiden is an international orientated university with a broad range of study programmes, ranging from biology to Japanese literature. Furthermore, Leiden University is the oldest university in the Netherlands with notable alumni, including the current king of the Netherlands. </p>
+				</div>
+				<div class='col-sm-2'></div>
+			</div>
 		</div>
-	</div>
-</div>
-</div>
- </div>
- <div class="cols-sm-2"></div>
- </div>
- </div>
-
-	<!-- <div class="container-fluid text-center bg-grey">
-        <div class="row">
-          <div class='col-sm-12'>
-            <a class='smooth' href="#myPage" title="To Top">
-              <a class='smooth' href='#myPage'><i class="fa fa-angle-up" aria-hidden="true"></i></a>
-            </a>
-          </div>
-        </div>
 
 
-       <div class="row" style='position: relative; left: -22px;'>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none;">
-              <!-- <li> About </li>
-              <li> Society </li>
-              <li> Project </li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none; list-style-image: none;">
-              <li> <a style='font-family: Montserrat, sans-serif; font-size: 12pt; color: rgb(51, 122, 183);' href='http://2016.igem.org/Team:Leiden/Templates'> Wiki templates </a> </li>
-            </ul>
-          </div>
-          <div class="col-sm-4">
-            <ul style="list-style-type: none;">
-            </ul>
-          </div>
-        </div> -->
+			<div id="h2" style='margin-top: -55px;' class="container-fluid bg-white">
+      	<div class="row">
+        	<div class='col-sm-2'></div>
+					<div class='col-sm-8'>
+						<h2 > Sponsors & Partners </h2>
+						<div id="sponsors">
+							<table id='sponsor_logo_table'></table>
+						</div>
+					</div>
+					<div class='col-sm-2'></div>
+				</div>
+			</div>
 
-	  <div w3-include-html="footer.html"></div>
-		<script>
-			w3IncludeHTML();
-		</script>
-	</div>
+			<!-- A cache used to load html templates -->
+	    <div id='template-cache' style='display: none;'>
+	      <div id='sponsor-logo-cell' style='margin: 20px;'>
+					<a target="_blank" href="http://www.esa.int/dut/ESA_in_your_country/The_Netherlands">
+						<img src='images/sponsor/image20.png' width="200px">
+					</a>
+				</div>
+	    </div>
+
+	  	<div w3-include-html="footer.html"></div>
+		</div>
   </body>
 </html>
