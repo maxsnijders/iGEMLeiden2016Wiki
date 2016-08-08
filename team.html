@@ -39,205 +39,139 @@
       }
     </style>
 	<script src="http://www.w3schools.com/lib/w3data.js"></script>
-	
+	<script type="text/javascript" src="scripts/table-layout.js"></script>
+	<script type="text/javascript">
+			window.members = [
+				{ name : 'Wouter Liefting',
+					image : 'image01.jpg',
+					role : 'Team Manager',
+					fos : 'MSc student nano biology'},
+				{ name : 'Charlotte v.d. Velde',
+					image : 'image03.jpg',
+					role : 'Safety Manager',
+					fos : 'MSc student biology'},
+				{ name : 'Valentijn Broeken',
+					image : 'image02.jpg',
+					role : 'PR Manager',
+					fos : 'BSc student biology'},
+				{ name : 'Lisanne van Oosterhoud',
+					image : 'image04.jpg',
+					role : 'Lab Manager',
+					fos : 'BSc student biology'},
+				{ name : 'Lucie Delfos',
+					image : 'image05.jpg',
+					role : 'Science Manager',
+					fos : 'MSc student chemistry'},
+				{ name : 'Frans Rodenburg',
+					image : 'image06.jpg',
+					role : 'Statistics Manager',
+					fos : 'MSc student biology and statistics'},
+				{ name : 'Lisa Verbeij',
+					image : 'image07.jpg',
+					role : 'Wiki Manager',
+					fos : 'MSc student biology'},
+				{ name : 'Koen Hokke',
+					image : 'image08.jpg',
+					role : 'Fundraising Manager',
+					fos : 'MSc student science based business'},
+				{ name : 'Guus de Wit',
+					image : 'image09.jpg',
+					role : 'Treasury Manager',
+					fos : 'MSc student mathematics'},
+				{ name : 'Max Snijders',
+					image : 'image10.jpg',
+					role : 'Modelling Manager',
+					fos : 'MSc student physics for smart people'},
+				{ name : 'Sjoerd Seekles',
+					image : 'image11.jpg',
+					role : 'Ethics Manager',
+					fos : 'MSc student biology'},
+				{ name : 'David van Driel',
+					image : 'image12.jpg',
+					role : 'Societal Outreach Manager',
+					fos : 'MSc student physics'},
+				{ name : 'Vincent de Bakker',
+					image : 'image13.jpg',
+					role : 'Secretary Manager',
+					fos : 'MSc student biology and statistics'}
+			];
+		
+			function layoutBody(){
+				window.tableLayout( $("#team-member-table"), function( teamMemberNumber ){						
+						element = $("#team-member-cell").clone();
+						member = window.members[ teamMemberNumber ];
+						element.find(".member-name").html( member.name );
+						element.find("img").attr('src', 'images/Team/' + member.image );
+						return element;
+					}, window.members.length, 290 );
+			};
+			
+			$( window ).ready(function(){
+				layoutBody();
+				w3IncludeHTML();
+			});
+			$( window ).resize(function(){
+				layoutBody();
+			});
+	</script>
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
-      
+				
       <div w3-include-html="navbar.html"></div>
 	  
-		<div id='header-background' style="background-image: url('images/Team/image00.jpg');">
-
-      </div>
-      <div class="jumbotron text-center">
-        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;'> Team </p>
-      </div>
-
-	   <div id="Team members" style='margin-top: -55px;' class="container-fluid bg-grey">
-        <div class="row">
-        	<div class='col-sm-2'></div>
-        	<div class='col-sm-8'>
-
-          </div>
-          <div class='col-sm-2'></div>
-        </div>
-     </div>
+			<div id='header-background' style="background-image: url('images/Team/image00.jpg');"></div>
+			<div class="jumbotron text-center">
+				<p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal; text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;'> Team </p>
+			</div>
      
-  
-	<div id="abstract" style='margin-top: -120px;' class="container-fluid bg-white">
-      <div class="row">
-        <!--  <div class='col-sm-12' id='rpm-demo' style='height: 400px;'> -->
-        <div class='col-sm-2'></div>
-        <div class='col-sm-8' style='text-align: justify;'>
-			<h2> Students </h2>
-	
-	<table>
-		<tr>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image01.jpg" width="300px">
-				<div>
-				<h2> Wouter Liefting </h2>
-				<b> Role: </b> Teamleader <br>
-				<b> Field of study: </b> MSc student Nano-biology <br>
-				<!--<b> Quote: </b> Chill -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image02.jpg' width="300px" >
-				<div>
-				<h2> Valentijn Broeken</h2>
-				<b> Role: </b> PR manager <br>
-				<b> Field of study: </b> BSc student Biology <br>
-				<!--<b> Quote: </b> I'll fix it -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image03.jpg" width="300px" >
-				<div>
-				<h2> Charlotte v.d. Velde</h2>
-				<b> Role: </b> Safety manager <br>
-				<b> Field of study: </b> MSc student Biology <br>
-				<!--<b> Quote: </b> I don't know -->
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image04.jpg' width="300px" >
-				<div>
-				<h2> Lisanne v.Oosterhoud </h2>
-				<b> Role: </b> Lab manager <br>
-				<b> Field of study: </b> BSc student Biology <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image05.jpg" width="300px" >
-				<div>
-				<h2> Lucie Delfos </h2>
-				<b> Role: </b> Science manager <br>
-				<b> Field of study: </b> MSc student LST <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image06.jpg' width="300px" >
-				<div>
-				<h2> Frans Rodenburg</h2>
-				<b> Role: </b> Statistics manager <br>
-				<b> Field of study: </b> MSc student Biology and Statistics <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image07.jpg" width="300px" >
-				<div>
-				<h2> Lisa Verbeij</h2>
-				<b> Role: </b> Wiki manager <br>
-				<b> Field of study: </b> MSc student Biology <br>
-				<!--<b> Quote: </b> -->
-				</div>			
-			</td>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image08.jpg' width="300px" >
-				<div>
-				<h2> Koen Hokke </h2>
-				<b> Role: </b> Head of acquisition <br>
-				<b> Field of study: </b> MSc student Science Based Business <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image09.jpg" width="300px" >
-				<div>
-				<h2> Guus de Wit </h2>
-				<b> Role: </b> Treasurer <br>
-				<b> Field of study: </b> MSc student Mathematics <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image10.jpg' width="300px" >
-				<div>
-				<h2> Max Snijders </h2>
-				<b> Role: </b> Head of modelling <br>
-				<b> Field of study: </b> MSc student Physics <br>
-			<!--	<b> Quote: </b> -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image11.jpg" width="300px" >
-				<div>
-				<h2> Sjoerd Seekles</h2>
-				<b> Role: </b> Head of ethics <br>
-				<b> Field of study: </b> MSc student Biology <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-			<td style='padding: 50px;'>
-			<img src='images/Team/image12.jpg' width="300px" >
-				<div>
-				<h2> David van Driel</h2>
-				<b> Role: </b> Head of societal outreach <br>
-				<b> Field of study: </b> MSc student Physics <br>
-				<!--<b> Quote: </b> If you can cut DNA, than you can cut paper as well.-->
-				</div>
-			</td>
-		<tr>
-		<tr>
-			<td style='padding: 50px;'>
-			<img src="images/Team/image13.jpg" width="300px" >
-				<div>
-				<h2> Vincent de Bakker</h2>
-				<b> Role: </b> Secretary <br>
-				<b> Field of study: </b> MSc student Biology and Statistics <br>
-				<!--<b> Quote: </b> -->
-				</div>
-			</td>
-		</tr>
-	</table>
-
-	
-	<!-- Hier een team foto van de advisors net als de header van het team <div id='header-background'>
-
-      </div>
-      <div class="jumbotron text-center">
-        <p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> Advisors </p>
-      </div> -->
-
-	  
-
-			<h2> Advisors </h2>
-      <div class="row">
-        <div class='col-sm-4' style='padding: 50px;"'>
-			 		<img src="images/Team/image16.jpg" width="200px">
-					<h2> Dennis Claessen </h2>
-					<b> Position: </b> Principal Investigator
-				</div>
-				<div class='col-sm-4' style='padding: 50px;'>
-				 <img src="images/Team/image15.jpg" width="200px"> 
-				 <h2> Anne v.d. Meij </h2>
-				 <b> Position: </b> Phd candidate
-				</div>
-				<div class='col-sm-4' style='padding: 50px;'>
-				 <img src="images/Team/image14.jpg" width="200px"> 
-				 <h2> Lizah v.d. Aart </h2>
-				 <b> Position: </b> Phd candidate
+     <!-- A cache used to load html templates -->
+			<div id='template-cache' style='display:none'>
+				<div id='team-member-cell' class='col-md-4' style='padding: 20px;'>
+					<img src="images/Team/image03.jpg" width="250px"/>
+					<p style='width:250px;'>
+						<h2 class='member-name' style='width:250px; height:1.5em;'> Charlotte v.d. Velde</h2>
+						<p style='width:250px;'> 
+							<b> Role: </b> Safety manager <br/>
+							<b> Field of study: </b> MSc student Biology
+						</p>
+					</p>
 				</div>
 			</div>
-		</div>
-	</div>
+  
+			<div id="team-members" style='margin-top: -120px;' class="container-fluid bg-white">
+				<div class="row">
+					<div class='col-sm-2'></div>
+					<div class='col-sm-8' style='text-align: justify;'>
+						<h2> Students </h2>
 
-	</div>
-	 <div w3-include-html="footer.html"></div>
-		<script>
-			w3IncludeHTML();
-		</script>
-	</div>
+						<table style='width: 100%;' id='team-member-table'></table>			
+
+						<h2> Advisors </h2>
+						<div class="row">
+							<div class='col-sm-4' style='padding: 50px;'>
+								<img src="images/Team/image16.jpg" width="200px"/>
+								<h2> Dennis Claessen </h2>
+								<b> Position: </b> Principal Investigator
+							</div>
+							<div class='col-sm-4' style='padding: 50px;'>
+							 <img src="images/Team/image15.jpg" width="200px"/> 
+							 <h2> Anne v.d. Meij </h2>
+							 <b> Position: </b> Phd candidate
+							</div>
+							<div class='col-sm-4' style='padding: 50px;'>
+							 <img src="images/Team/image14.jpg" width="200px"/> 
+							 <h2> Lizah v.d. Aart </h2>
+							 <b> Position: </b> Phd candidate
+							</div>
+						</div>
+					</div>
+					<div class="col-2-sm"></div>
+				</div>
+			</div>
+
+			<div w3-include-html="footer.html"></div>
+		</div>
   </body>
 </html>
