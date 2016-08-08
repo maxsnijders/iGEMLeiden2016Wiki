@@ -5,13 +5,22 @@ window.tableAutoLayout.layoutTable = function( table, tableCellContentCallbackCo
 
 	// Get the number of cells per row
 	numberOfCellsPerRow = Math.max( 1, Math.floor( tableWidth / blockWidth ) );
-	
+
 	// Get the number of rows
 	numberOfRows = Math.ceil( numCells / numberOfCellsPerRow );
 
 	// Clear current content
 	table.html("<tbody></tbody>");
 	tbody = table.find('tbody');
+
+	// Compute the total outputted table width
+	var twidth = numberOfCellsPerRow * blockWidth;
+
+	// Compute the margins for the table to be center-aligned.
+	var margin = (tableWidth - twidth) / 2;
+
+	// Move the table
+	table.attr('style', 'margin-left: ' + margin + 'px;');
 
 	// Start outputting!
 	for( var rowIndex = 0; rowIndex < numberOfRows; rowIndex++ ){
@@ -26,7 +35,7 @@ window.tableAutoLayout.layoutTable = function( table, tableCellContentCallbackCo
 				}
 
 				// Add a cell to the row
-			  var cell = $('<td class="auto-layout-table-cell">');
+			  var cell = $('<td class="auto-layout-table-cell" style="width: '+ blockWidth +'px;">');
 
 				// Get the content for the cell
 				cellContent = tableCellContentCallback( cellNumber, tableCellContentCallbackContext );
