@@ -1,96 +1,102 @@
 <footer class="container-fluid text-center bg-grey">
-      <div class="row">
-        <div class='col-sm-12'>
-          <a class='smooth' href="#myPage" title="To Top">
-            <span class="glyphicon glyphicon-chevron-up"></span>
-          </a>
-        </div> 
-      </div> 
 
-      <div class="row" style='position: relative; left: -22px;'>
-        <div class="col-sm-4">
-          <ul style="list-style-type: none;">
-            <a class="navbar-brand" href="index.html">
-		  <img alt="iGEM" src="images/logo_iGEM_Leiden.png" width="150" style="position: relative; padding: -50px "/>
-		  </a>
-		  </ul>
-		 </div>
-        <div class="col-sm-4">
-		<ul style="list-style-type: none;">
-            <h3> Follow us </h3> 
-				<center>
-				<table>
-				<tr>
-					<td style='padding: 5px'>
-						<a id="adress" href="https://www.universiteitleiden.nl/en/science/biology" target="blank">
-							<div class="cf">
-								
-								
-								<img class="bottom" src='images/Footer/image01.png' width="50px" >
-								<img class="top" src='images/Footer/image00.png' width="50px" >
-							</div>
-						</a>
-					</td>
-					<td style='padding: 5px'>
-						<a id="mail" href="mailto:igem@science.leidenuniv.nl" target="blank"/>
-							<div class="cf">
-								
-								
-								<img class="bottom" src='images/Footer/image07.png' width="50px" >
-								<img class="top" src='images/Footer/image06.png' width="50px" >
-							</div>
-						</a>
-					</td>
-					<td style='padding: 5px'>
-						<a id="mail" href="https://www.facebook.com/igemleiden/?fref=ts" target="blank"/>
-							<div class="cf">
-								
-								
-								<img class="bottom" src='images/Footer/image03.png' width="50px" >
-								<img class="top" src='images/Footer/image02.png' width="50px" >
-							</div>
-						</a>
-					</td>
-					<td style='padding: 5px'>
-						<a id="mail" href="https://twitter.com/igem_leiden" target="blank"/>
-							<div class="cf">
-								
-								
-								<img class="bottom" src='images/Footer/image05.png' width="50px" >
-								<img class="top" src='images/Footer/image04.png' width="50px" >
-							</div>
-						</a>
-					</td>
-					<td style='padding: 5px'>
-						<a id="mail" href="https://www.youtube.com/channel/UC8GsFSVutTryH-KqzgfvSfQ" target="blank"/>
-							<div class="cf">
-								
-								
-								<img class="bottom" src='images/Footer/image09.png' width="50px" >
-								<img class="top" src='images/Footer/image08.png' width="50px" >
-							</div>
-						</a>
-					</td>
-				</tr>
-				</table>
-			</center>
-          </ul>
-        </div>
-        <div class="col-sm-4">
-			  <ul style="list-style-type: none;">
-				<h3>Contact us </h3>
-					<li>iGEM Team Leiden <br>
-					Sylviusweg 72, 2333BE Leiden <br>
-					Email:  <a href="mailto:igem@science.leidenuniv.nl" target="blank">igem@science.leidenuniv.nl</a> <br>
-					Phone: +31 71 527 5052
-				</li>
-			</ul>
-        </div>
-      </div>
+  <div class="row">
+    <div class='col-sm-12'>
+      <a class='smooth' href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
+    </div>
+  </div>
 
-      <div class="row">
-        <div class='col-sm-12'>
-          <p> iGEM Leiden is an intiative by students from Leiden University </p>
-        </div>
+  <div class="row" style='width: 100%; margin: 0px; padding: 0px;'>
+    <div class="col-sm-4" style='height: 200px;'>
+      <ul style="list-style-type: none;">
+        <a class="navbar-brand" href="index.html">
+          <img alt="iGEM" src="images/logo_iGEM_Leiden.png" width="150" style="position: relative; padding: -50px "/>
+        </a>
+      </ul>
+    </div>
+
+    <div class="col-sm-4" style='height: 200px;'>
+      <h3 style='width: 100%; text-align: center;'> Follow us </h3>
+      <div style='width: 100%; margin: 0px; padding: 0px;'>
+        <table id='footer_logo_table'></table>
       </div>
-    </footer>
+    </div>
+
+    <div class="col-sm-4" style='height: 200px;'>
+	    <ul style="list-style-type: none;">
+		    <h3>Contact us </h3>
+			  <li>
+          iGEM Team Leiden <br/>
+      		Sylviusweg 72, 2333BE Leiden <br/>
+      		Email:  <a href="mailto:igem@science.leidenuniv.nl" target="blank">igem@science.leidenuniv.nl</a> <br/>
+      		Phone: +31 71 527 5052
+		    </li>
+	    </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class='col-sm-12'>
+      <p> iGEM Leiden is an intiative by students from Leiden University </p>
+    </div>
+  </div>
+
+  <!-- A cache used to load html templates -->
+  <div id='template-cache' style='display: none;'>
+    <div id='footer-logo-cell' style='margin: 5px;'>
+      <a id="mail" href="https://www.facebook.com/igemleiden/?fref=ts" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image03.png' width="50px"/>
+          <img class="top" src='images/Footer/image02.png' width="50px"/>
+        </div>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!--
+  <tr>
+    <td style='padding: 5px'>
+      <a id="adress" href="https://www.universiteitleiden.nl/en/science/biology" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image01.png' width="50px" >
+          <img class="top" src='images/Footer/image00.png' width="50px" >
+        </div>
+      </a>
+    </td>
+    <td style='padding: 5px'>
+      <a id="mail" href="mailto:igem@science.leidenuniv.nl" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image07.png' width="50px" >
+          <img class="top" src='images/Footer/image06.png' width="50px" >
+        </div>
+      </a>
+    </td>
+    <td style='padding: 5px'>
+      <a id="mail" href="https://www.facebook.com/igemleiden/?fref=ts" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image03.png' width="50px" >
+          <img class="top" src='images/Footer/image02.png' width="50px" >
+        </div>
+      </a>
+    </td>
+    <td style='padding: 5px'>
+      <a id="mail" href="https://twitter.com/igem_leiden" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image05.png' width="50px" >
+          <img class="top" src='images/Footer/image04.png' width="50px" >
+        </div>
+      </a>
+    </td>
+    <td style='padding: 5px'>
+      <a id="mail" href="https://www.youtube.com/channel/UC8GsFSVutTryH-KqzgfvSfQ" target="blank">
+        <div class="cf">
+          <img class="bottom" src='images/Footer/image09.png' width="50px" >
+          <img class="top" src='images/Footer/image08.png' width="50px" >
+        </div>
+      </a>
+    </td>
+  </tr>
+</table>-->

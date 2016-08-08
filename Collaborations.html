@@ -35,7 +35,17 @@
     </style>
 
     <script src="scripts/include-html.js"></script>
-
+    <script src="scripts/table-layout.js"></script>
+    <script type="text/javascript" src="scripts/global.js"></script>
+    <script type="text/javascript">
+        $( window ).ready(function(){
+          // Load the includes
+          w3IncludeHTML();
+          window.include( '#footer_html', 'footer.html', function(){
+            window.footer.load();
+          } );
+        });
+    </script>
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
@@ -57,11 +67,7 @@
 		</div>
 	</div>
 
-	<div w3-include-html="footer.html"></div>
-
-		<script>
-			w3IncludeHTML();
-		</script>
+	<div id="footer_html"></div>
 
   </body>
 </html>
