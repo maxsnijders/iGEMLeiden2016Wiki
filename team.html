@@ -1,31 +1,26 @@
 <html>
-	 <head>
+	<head>
     <title> iGEM Leiden Wiki : Project </title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/libraries/bootstrap-3-3-6-dist/css/bootstrap-min?action=raw&ctype=text/css">
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/libraries/font-awesome-4-6-3/css/font-awesome-min?action=raw&ctype=text/css" type='text/css'/>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/libraries/jquery-1-12-4?action=raw&ctype=text/js"></script>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/libraries/bootstrap-3-3-6-dist/js/bootstrap-min?action=raw&ctype=text/js"></script>
+    <link rel="stylesheet" href="libraries/bootstrap-3.3.6-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libraries/font-awesome-4.6.3/css/font-awesome.min.css" type='text/css'/>
+    <script type="text/javascript" src="libraries/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="libraries/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/fonts/Montserrat?action=raw&ctype=text/css"/>
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/fonts/Lato?action=raw&ctype=text/css"/>
+    <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
+    <link rel="stylesheet" href="style/fonts/Lato.css"/>
 
-    <link rel="stylesheet" href="http://2016.igem.org/Team:Leiden/style/main?action=raw&ctype=text/css"/>
-    <script type="text/javascript" src="http://2016.igem.org/Team:Leiden/scripts/smoothscrolling?action=raw&ctype=text/css"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <link rel="stylesheet" href="style/main.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="style/fonts/Montserrat.css"/>
     <link rel="stylesheet" href="Style/fonts/Lato.css"/>
 
     <link rel="stylesheet" href="style/main.css"/>
     <script type="text/javascript" src="scripts/smooth-scrolling.js"></script>
-
-    <script type="text/javascript" src="libraries/three.min.js"/></script>
-
-    <script type="text/javascript" src="scripts/rpm-demo.js"/></script>
 
 	<style type='text/css'>
       #top_title, #sideMenu{
@@ -95,77 +90,90 @@
 					role : 'Secretary Manager',
 					fos : 'MSc student biology and statistics'}
 			];
-		
-			function layoutBody(){
-				window.tableLayout( $("#team-member-table"), function( teamMemberNumber ){						
-						element = $("#team-member-cell").clone();
-						member = window.members[ teamMemberNumber ];
-						element.find(".member-name").html( member.name );
-						element.find("img").attr('src', 'images/Team/' + member.image );
-						return element;
-					}, window.members.length, 290 );
-			};
-			
+			window.supervisors = [
+				{
+					name : 'Dennis Claessen',
+					image : 'image16.jpg',
+					position : 'Principal Investigator'
+				},
+				{
+					name : 'Lizah v.d. Aart',
+					image : 'image14.jpg',
+					role : 'PhD candidate'
+				},
+				{
+					name : 'Anne v.d. Meij',
+					image : 'image15.jpg',
+					role : 'PhD candidate'
+				}
+			];
+
 			$( window ).ready(function(){
-				layoutBody();
+
+				// Load the includes
 				w3IncludeHTML();
-			});
-			$( window ).resize(function(){
-				layoutBody();
+
+				// Add auto-layout-tables
+				window.tableAutoLayout.addTable( "#team-members-table", window.members, "#team-member-cell", 290, function( member, cell ){
+					cell.find(".member-name").html( member.name );
+					cell.find("img").attr( 'src', 'images/Team/' + member.image );
+					cell.find(".member-role").html( member.role );
+					cell.find(".member-fos").html( member.fos );
+					return cell;
+				} );
+
+				window.tableAutoLayout.addTable( "#team-supervisors-table", window.supervisors, "#team-supervisor-cell", 290, function( supervisor, cell ){
+					cell.find(".supervisor-name").html( supervisor.name );
+					cell.find("img").attr( 'src', 'images/Team/' + supervisor.image );
+					cell.find(".supervisor-role").html( supervisor.role );
+					return cell;
+				} );
 			});
 	</script>
  </head>
   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <div id="body-wrapper">
       <div id='nav-background' style='position: fixed; top: 15px;'></div>
-				
+
       <div w3-include-html="navbar.html"></div>
-	  
+
 			<div id='header-background' style="background-image: url('images/Team/image00.jpg');"></div>
 			<div class="jumbotron text-center">
 				<p> Team </p>
 			</div>
-     
+
      <!-- A cache used to load html templates -->
 			<div id='template-cache' style='display:none'>
-				<div id='team-member-cell' class='col-md-4' style='padding: 20px;'>
+				<div id='team-member-cell' style='padding: 20px;'>
 					<img src="images/Team/image03.jpg" width="250px"/>
 					<p style='width:250px;'>
 						<h2 class='member-name' style='width:250px; height:1.5em;'> Charlotte v.d. Velde</h2>
-						<p style='width:250px;'> 
-							<b> Role: </b> Safety manager <br/>
-							<b> Field of study: </b> MSc student Biology
+						<p style='width:250px;'>
+							<b> Role: </b> <span class='member-role'> Safety manager </span> <br/>
+							<b> Field of study: </b> <span class='member-fos'> MSc student Biology </span>
 						</p>
 					</p>
 				</div>
+				<div id='team-supervisor-cell' style='padding: 20px'>
+					<img src="images/Team/image16.jpg" width="250px"/>
+					<h2 class='supervisor-name' style='width: 250px; height: 1.5em;'> Dennis Claessen </h2>
+					<p style='width:250px;'>
+						<b> Position: </b> <span class='supervisor-role'> Principal Investigator </span>
+					</p>
+				</div>
 			</div>
-  
+
 			<div id="team-members" style='margin-top: -120px;' class="container-fluid bg-white">
 				<div class="row">
 					<div class='col-sm-2'></div>
 					<div class='col-sm-8' style='text-align: justify;'>
 						<h2> Students </h2>
 
-						<table style='width: 100%;' id='team-member-table'></table>			
+						<table style='width: 100%;' id='team-members-table'></table>
 
 						<h2> Advisors </h2>
-						<div class="row">
-							<div class='col-sm-4' style='padding: 50px;'>
-								<img src="images/Team/image16.jpg" width="200px"/>
-								<h2> Dennis Claessen </h2>
-								<b> Position: </b> Principal Investigator
-							</div>
-							<div class='col-sm-4' style='padding: 50px;'>
-							 <img src="images/Team/image15.jpg" width="200px"/> 
-							 <h2> Anne v.d. Meij </h2>
-							 <b> Position: </b> Phd candidate
-							</div>
-							<div class='col-sm-4' style='padding: 50px;'>
-							 <img src="images/Team/image14.jpg" width="200px"/> 
-							 <h2> Lizah v.d. Aart </h2>
-							 <b> Position: </b> Phd candidate
-							</div>
-						</div>
+
+						<table style='width: 100%;' id='team-supervisors-table'></table>
 					</div>
 					<div class="col-2-sm"></div>
 				</div>
