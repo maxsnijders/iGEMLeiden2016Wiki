@@ -33,77 +33,77 @@
         padding: 0;
       }
     </style>
-		<script src="scripts/include-html.js"></script>
+	<script src="scripts/include-html.js"></script>
 	<script type="text/javascript" src="scripts/table-layout.js"></script>
 	<script type="text/javascript">
 			window.members = [
 				{ name : 'Wouter Liefting',
-					image : 'image01.jpg',
+					image : 'image_wou',
 					role : 'Team Manager',
 					fos : 'MSc student nano biology'},
 				{ name : 'Charlotte v.d. Velde',
-					image : 'image03.jpg',
+					image : 'image_cha',
 					role : 'Safety Manager',
 					fos : 'MSc student biology'},
 				{ name : 'Valentijn Broeken',
-					image : 'image02.jpg',
+					image : 'image_val',
 					role : 'PR Manager',
 					fos : 'BSc student biology'},
 				{ name : 'Lisanne van Oosterhoud',
-					image : 'image04.jpg',
+					image : 'image_lan',
 					role : 'Lab Manager',
 					fos : 'BSc student biology'},
 				{ name : 'Lucie Delfos',
-					image : 'image05.jpg',
+					image : 'image_luc',
 					role : 'Science Manager',
 					fos : 'MSc student chemistry'},
 				{ name : 'Frans Rodenburg',
-					image : 'image06.jpg',
+					image : 'image_fra',
 					role : 'Statistics Manager',
 					fos : 'MSc student biology and statistics'},
 				{ name : 'Lisa Verbeij',
-					image : 'image07.jpg',
+					image : 'image_lis',
 					role : 'Wiki Manager',
 					fos : 'MSc student biology'},
 				{ name : 'Koen Hokke',
-					image : 'image08.jpg',
+					image : 'image_koe',
 					role : 'Fundraising Manager',
 					fos : 'MSc student science based business'},
 				{ name : 'Guus de Wit',
-					image : 'image09.jpg',
+					image : 'image_guu',
 					role : 'Treasury Manager',
-					fos : 'MSc student mathematics'},
+					fos : 'MSc student algebra, geometry and number theory'},
 				{ name : 'Max Snijders',
-					image : 'image10.jpg',
+					image : 'image_max',
 					role : 'Modelling Manager',
-					fos : 'MSc student physics for smart people'},
+					fos : 'MSc student theoretical and mathematical physics'},
 				{ name : 'Sjoerd Seekles',
-					image : 'image11.jpg',
+					image : 'image_sjo',
 					role : 'Ethics Manager',
 					fos : 'MSc student biology'},
 				{ name : 'David van Driel',
-					image : 'image12.jpg',
+					image : 'image_dav',
 					role : 'Societal Outreach Manager',
 					fos : 'MSc student physics'},
 				{ name : 'Vincent de Bakker',
-					image : 'image13.jpg',
+					image : 'image_vin',
 					role : 'Secretary Manager',
 					fos : 'MSc student biology and statistics'}
 			];
 			window.supervisors = [
 				{
 					name : 'Dennis Claessen',
-					image : 'image16.jpg',
+					image : 'image_den',
 					position : 'Principal Investigator'
 				},
 				{
 					name : 'Lizah v.d. Aart',
-					image : 'image14.jpg',
+					image : 'image_liz',
 					role : 'PhD candidate'
 				},
 				{
 					name : 'Anne v.d. Meij',
-					image : 'image15.jpg',
+					image : 'image_ann',
 					role : 'PhD candidate'
 				}
 			];
@@ -116,7 +116,7 @@
 				// Add auto-layout-tables
 				window.tableAutoLayout.addTable( "#team-members-table", window.members, "#team-member-cell", 290, function( member, cell ){
 					cell.find(".member-name").html( member.name );
-					cell.find("img").attr( 'src', 'images/Team/' + member.image );
+					cell.find("img").attr( 'src', $( "#" + member.image ).attr('src') );
 					cell.find(".member-role").html( member.role );
 					cell.find(".member-fos").html( member.fos );
 					return cell;
@@ -124,7 +124,7 @@
 
 				window.tableAutoLayout.addTable( "#team-supervisors-table", window.supervisors, "#team-supervisor-cell", 290, function( supervisor, cell ){
 					cell.find(".supervisor-name").html( supervisor.name );
-					cell.find("img").attr( 'src', 'images/Team/' + supervisor.image );
+					cell.find("img").attr( 'src', $( "#" + supervisor.image ).attr('src') );
 					cell.find(".supervisor-role").html( supervisor.role );
 					return cell;
 				} );
@@ -148,18 +148,38 @@
 
       <div w3-include-html="navbar.html"></div>
 
-			<div id='header-background' style="background-image: url('images/Team/image00.jpg');"></div>
+			<div id='header-background' style="background-image: url('http://2016.igem.org/wiki/images/e/ea/Team-Leiden-images-Team-image00.jpg');">
+
+			</div>
 			<div class="jumbotron text-center">
-				<p> Team </p>
+				<p style='font-size: 100px; color: white; text-align: center; font-family: Montserrat, sans-serif; font-weight: normal;'> Team </p>
 			</div>
 
      <!-- A cache used to load html templates -->
 			<div id='template-cache' style='display:none'>
+				<div id='team-images-store'>
+					<img id='image_cha' src='images/Team/image03.jpg'/>
+					<img id='image_wou' src='images/Team/image01.jpg'/>
+					<img id='image_val' src='images/Team/image02.jpg'/>
+					<img id='image_lan' src='images/Team/image04.jpg'/>
+					<img id='image_luc' src='images/Team/image05.jpg'/>
+					<img id='image_fra' src='images/Team/image06.jpg'/>
+					<img id='image_lis' src='images/Team/image07.jpg'/>
+					<img id='image_koe' src='images/Team/image08.jpg'/>
+					<img id='image_guu' src='images/Team/image09.jpg'/>
+					<img id='image_max' src='images/Team/image10.jpg'/>
+					<img id='image_sjo' src='images/Team/image11.jpg'/>
+					<img id='image_dav' src='images/Team/image12.jpg'/>
+					<img id='image_vin' src='images/Team/image13.jpg'/>
+					<img id='image_liz' src='images/Team/image14.jpg'/>
+					<img id='image_ann' src='images/Team/image15.jpg'/>
+					<img id='image_den' src='images/Team/image16.jpg'/>
+				</div>
 				<div id='team-member-cell' style='padding: 20px;'>
 					<img src="images/Team/image03.jpg" width="250px"/>
 					<p style='width:250px;'>
-						<h2 class='member-name' style='width:250px; height:1.5em;'> Charlotte v.d. Velde</h2>
-						<p style='width:250px;'>
+						<h2 class='member-name' style='width:250px; height:2.7em; font-size: 24px'> Charlotte v.d. Velde</h2>
+						<p style='width:250px; text-align: left;'>
 							<b> Role: </b> <span class='member-role'> Safety manager </span> <br/>
 							<b> Field of study: </b> <span class='member-fos'> MSc student Biology </span>
 						</p>

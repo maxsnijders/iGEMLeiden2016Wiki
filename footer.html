@@ -2,9 +2,7 @@
 
   <div class="row">
     <div class='col-sm-12'>
-      <a class='smooth' href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-      </a>
+      <a class='smooth' onclick="window.toTop()"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
     </div>
   </div>
 
@@ -20,38 +18,46 @@
     <div class="col-sm-4" style='height: 200px;'>
       <h3 style='width: 100%; text-align: center;'> Follow us </h3>
       <div style='width: 100%; margin: 0px; padding: 0px;'>
-        <table id='footer_logo_table'></table>
+        <table id='footer_logo_table' style='border: none;'></table>
       </div>
     </div>
 
-    <div class="col-sm-4" style='height: 200px;'>
-	    <ul style="list-style-type: none;">
+    <div class="col-sm-4" style='height: 200px; text-align: center;'>
 		    <h3>Contact us </h3>
-			  <li>
-          iGEM Team Leiden <br/>
-      		Sylviusweg 72, 2333BE Leiden <br/>
-      		Email:  <a href="mailto:igem@science.leidenuniv.nl" target="blank">igem@science.leidenuniv.nl</a> <br/>
-      		Phone: +31 71 527 5052
-		    </li>
-	    </ul>
+        <p style='text-align: center;'> iGEM Team Leiden <br/>
+    		Sylviusweg 72, 2333BE Leiden <br/>
+    		Email:  <a href="mailto:igem@science.leidenuniv.nl" target="blank">igem@science.leidenuniv.nl</a> <br/>
+    		Phone: +31 71 527 5052 </p>
     </div>
   </div>
 
   <div class="row">
     <div class='col-sm-12'>
-      <p> iGEM Leiden is an intiative by students from Leiden University </p>
+      <p style='text-align: center; width: 100%;'> iGEM Leiden is an intiative by students from Leiden University </p>
     </div>
   </div>
 
   <!-- A cache used to load html templates -->
   <div id='template-cache' style='display: none;'>
-    <div id='footer-logo-cell' style='margin: 5px;'>
+    <div id='footer-logo-cell' style='margin: 0px; padding: 0px; margin-top: -20px; margin-bottom: -20px;'>
       <a id="mail" href="https://www.facebook.com/igemleiden/?fref=ts" target="blank">
         <div class="cf">
           <img class="bottom" src='images/Footer/image03.png' width="50px"/>
           <img class="top" src='images/Footer/image02.png' width="50px"/>
         </div>
       </a>
+    </div>
+    <div id='footer-logo-store'>
+      <img id='footer_home_flat' src='images/Footer/image03.png'/>
+      <img id='footer_home_full' src='images/Footer/image02.png'/>
+      <img id='footer_mail_flat' src='images/Footer/image05.png'/>
+      <img id='footer_mail_full' src='images/Footer/image04.png'/>
+      <img id='footer_face_flat' src='images/Footer/image01.png'/>
+      <img id='footer_face_full' src='images/Footer/image00.png'/>
+      <img id='footer_twit_flat' src='images/Footer/image07.png'/>
+      <img id='footer_twit_full' src='images/Footer/image06.png'/>
+      <img id='footer_yout_flat' src='images/Footer/image09.png'/>
+      <img id='footer_yout_full' src='images/Footer/image08.png'/>
     </div>
   </div>
 </footer>

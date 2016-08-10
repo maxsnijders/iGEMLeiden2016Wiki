@@ -37,15 +37,15 @@
 	<script type="text/javascript" src="scripts/table-layout.js"></script>
 	<script type="text/javascript">
 			window.sponsors = [
-				{ logo : 'image00.png', url : 'https://www.NEB.com' },
-				{ logo : 'image04.png', url : 'https://www.sarstedt.com/en/home' },
-				{ logo : 'image19.jpg', url : 'http://www.baseclear.com/' },
-				{ logo : 'image08.png', url : 'https://www.sigmaaldrich.com' },
-				{ logo : 'image10.png', url : 'http://chdr.nl' },
-				{ logo : 'image12.png', url : 'http://www.dsm.com/corporate/home.html' },
-				{ logo : 'image14.png', url : 'http://www.nature.com/nmicrobiol/' },
-				{ logo : 'image18.png', url : 'http://www.snapgene.com/' },
-				{ logo : 'image20.png', url : 'http://www.esa.int/dut/ESA_in_your_country/The_Netherlands' },
+				{ logo : 'sponsor_logo_neb', url : 'https://www.NEB.com' },
+				{ logo : 'sponsor_logo_sar', url : 'https://www.sarstedt.com/en/home' },
+				{ logo : 'sponsor_logo_bas', url : 'http://www.baseclear.com/' },
+				{ logo : 'sponsor_logo_sig', url : 'https://www.sigmaaldrich.com' },
+				{ logo : 'sponsor_logo_chd', url : 'http://chdr.nl' },
+				{ logo : 'sponsor_logo_dsm', url : 'http://www.dsm.com/corporate/home.html' },
+				{ logo : 'sponsor_logo_nat', url : 'http://www.nature.com/nmicrobiol/' },
+				{ logo : 'sponsor_logo_sna', url : 'http://www.snapgene.com/' },
+				{ logo : 'sponsor_logo_esa', url : 'http://www.esa.int/dut/ESA_in_your_country/The_Netherlands' },
 			];
 
 			$( window ).ready(function(){
@@ -55,7 +55,7 @@
 
 				// Add auto-layout-tables
 				window.tableAutoLayout.addTable( "#sponsor_logo_table", window.sponsors, "#sponsor-logo-cell", 230, function( sponsor, cell ){
-					cell.find("img").attr( 'src', 'images/sponsor/' + sponsor.logo );
+					cell.find("img").attr( 'src', $( "#" + sponsor.logo ).attr('src') );
 					cell.find("a").attr( 'href', sponsor.url );
 					return cell;
 				} );
@@ -162,6 +162,17 @@
 					<a target="_blank" href="http://www.esa.int/dut/ESA_in_your_country/The_Netherlands">
 						<img src='images/sponsor/image20.png' width="200px">
 					</a>
+				</div>
+				<div id='sponsor-logo-store'>
+					<img id='sponsor_logo_neb' src='images/sponsor/image00.png'/>
+					<img id='sponsor_logo_sar' src='images/sponsor/image04.png'/>
+					<img id='sponsor_logo_bas' src='images/sponsor/image19.jpg'/>
+					<img id='sponsor_logo_sig' src='images/sponsor/image08.png'/>
+					<img id='sponsor_logo_chd' src='images/sponsor/image10.png'/>
+					<img id='sponsor_logo_dsm' src='images/sponsor/image12.png'/>
+					<img id='sponsor_logo_nat' src='images/sponsor/image14.png'/>
+					<img id='sponsor_logo_sna' src='images/sponsor/image18.png'/>
+					<img id='sponsor_logo_esa' src='images/sponsor/image20.png'/>
 				</div>
 	    </div>
 

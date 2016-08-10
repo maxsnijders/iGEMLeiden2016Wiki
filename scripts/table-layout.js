@@ -18,14 +18,16 @@ window.tableAutoLayout.layoutTable = function( table, tableCellContentCallbackCo
 
 	// Compute the margins for the table to be center-aligned.
 	var margin = (tableWidth - twidth) / 2;
-	
+
 	// Move the table
-	table.attr('style', 'margin-left: ' + margin + 'px;');
+	table.css('margin-left', margin + 'px;');
+	table.css('border','none');
 
 	// Start outputting!
 	for( var rowIndex = 0; rowIndex < numberOfRows; rowIndex++ ){
 			// Add a row to the table
 			row = $('<tr class="auto-layout-table-row">');
+			row.css('border','none');
 
 			for( var colIndex = 0; colIndex < numberOfCellsPerRow; colIndex++ ){
 				cellNumber = colIndex + rowIndex * numberOfCellsPerRow;
@@ -35,7 +37,10 @@ window.tableAutoLayout.layoutTable = function( table, tableCellContentCallbackCo
 				}
 
 				// Add a cell to the row
-			  var cell = $('<td class="auto-layout-table-cell" style="width: '+ blockWidth +'px;">');
+			  var 	cell = $('<td class="auto-layout-table-cell" style="width: '+ blockWidth +'px;">');
+				cell.css('border','none');
+				cell.css('margin','0px');
+				cell.css('padding','0px');
 
 				// Get the content for the cell
 				cellContent = tableCellContentCallback( cellNumber, tableCellContentCallbackContext );

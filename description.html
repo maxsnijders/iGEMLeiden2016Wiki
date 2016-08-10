@@ -41,10 +41,10 @@
 
   <script type="text/javascript">
       window.photos = [
-        { path: 'image00.gif'},
-        { path: 'image01.jpg'},
-        { path: 'image02.jpg'},
-        { path: 'image03.jpg'},
+        { path: 'project_description_00' },
+        { path: 'project_description_01' },
+        { path: 'project_description_02' },
+        { path: 'project_description_03' },
       ];
 
       $( window ).ready(function(){
@@ -54,7 +54,7 @@
 
         // Add auto-layout-tables
         window.tableAutoLayout.addTable( "#project_description_images", window.photos, "#project-description-image", 170, function( photo, cell ){
-          cell.find("img").attr( 'src', 'images/project/' + photo.path );
+          cell.find("img").attr( 'src', $( "#" + photo.path  ).attr('src') );
           return cell;
         } );
 
@@ -93,6 +93,12 @@
       <div id='template-cache' style='display: none;'>
         <div id='project-description-image' style='padding: 10px;'>
           <img src="images/Team/image03.jpg" width="150px"/>
+        </div>
+        <div id='project-description-image-store'>
+          <img id='project_description_00' src='images/project/image00.gif'/>
+          <img id='project_description_01' src='images/project/image01.jpg'/>
+          <img id='project_description_02' src='images/project/image02.jpg'/>
+          <img id='project_description_03' src='images/project/image03.jpg'/>
         </div>
       </div>
 

@@ -16,11 +16,11 @@ html, body {
 }
 
 .jumbotron p{
-	font-size: 100px; 
-	color: white; 
-	text-align: center; 
-	font-family: Montserrat, sans-serif; 
-	font-weight: normal; 
+	font-size: 100px;
+	color: white;
+	text-align: center;
+	font-family: Montserrat, sans-serif;
+	font-weight: normal;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black, 2px 2px black, 2px -2px black, -2px -2px black, -2px 2px black;
 }
 
@@ -194,7 +194,7 @@ h4 {
     position: relative;
 	background-color: #f9f9f9;
     right: 0;
-    
+
 }
 
 .dropdown-content a {
